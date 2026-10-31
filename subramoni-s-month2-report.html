@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>LinkedIn Performance Report &mdash; Month 2 | Subramoni S.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>(function(){var sources=['https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js','https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js','https://unpkg.com/chart.js@4.4.4/dist/chart.umd.min.js'];var i=0;function ready(){window.dispatchEvent(new Event('chartjs-ready'));}function tryNext(){if(i>=sources.length){ready();return;}var s=document.createElement('script');s.src=sources[i++];s.onload=ready;s.onerror=tryNext;document.head.appendChild(s);}tryNext();})()</script>
+<style>:root{--ink:#101828;--ink-soft:#2b3344;--paper:#FAF8F3;--paper-dim:#F0ECE1;--card:#FFFFFF;--line:#E4DFD2;--line-dark:#2A3245;--gold:#B8892F;--gold-soft:#E7CE9C;--teal:#1F6F63;--teal-light:#4C9C8D;--brick:#A85239;--muted:#6B7280;--radius-s:3px;--radius-m:6px;--maxw:1180px;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;}body{margin:0;font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;}h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0;letter-spacing:-0.01em;color:var(--ink);}p{margin:0;line-height:1.6;}a{color:inherit;}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}::selection{background:var(--gold-soft);}
+.shell{display:grid;grid-template-columns:220px 1fr;}@media(max-width:980px){.shell{grid-template-columns:1fr;}}
+.rail{position:sticky;top:0;align-self:start;height:100vh;background:var(--ink);color:#cdd3de;padding:28px 20px;display:flex;flex-direction:column;gap:24px;border-right:1px solid var(--line-dark);}@media(max-width:980px){.rail{position:sticky;height:auto;flex-direction:row;align-items:center;overflow-x:auto;padding:14px 16px;gap:18px;z-index:40;top:0;}}
+.rail-brand{font-family:'Fraunces',serif;font-size:15px;color:#fff;line-height:1.3;flex:none;}.rail-brand small{display:block;font-family:'Inter',sans-serif;font-size:11px;color:#8993A6;font-weight:500;margin-top:2px;}
+.rail-nav{display:flex;flex-direction:column;gap:1px;flex:1;}@media(max-width:980px){.rail-nav{flex-direction:row;gap:4px;}}
+.rail-nav a{text-decoration:none;color:#9aa3b5;font-size:12.5px;font-weight:500;padding:8px 10px;border-radius:var(--radius-s);white-space:nowrap;border-left:2px solid transparent;transition:color .15s ease,background .15s ease,border-color .15s ease;}@media(max-width:980px){.rail-nav a{border-left:none;border-bottom:2px solid transparent;}}
+.rail-nav a:hover{color:#fff;}.rail-nav a.active{color:#fff;background:rgba(255,255,255,0.06);border-left-color:var(--gold);}@media(max-width:980px){.rail-nav a.active{border-left-color:transparent;border-bottom-color:var(--gold);}}
+.rail-foot{font-size:11px;color:#6b7488;flex:none;}@media(max-width:980px){.rail-foot{display:none;}}
+main{min-width:0;}
+.hero{background:var(--ink);color:#EDEFF3;padding:64px 0 48px;background-image:radial-gradient(circle at 88% 12%,rgba(184,137,47,0.14),transparent 45%);border-bottom:1px solid var(--line-dark);}
+.hero-kicker{font-size:13px;color:var(--gold-soft);font-weight:600;margin-bottom:14px;}.hero h1{font-size:clamp(30px,4vw,44px);color:#fff;max-width:18ch;line-height:1.08;}.hero-sub{margin-top:18px;max-width:62ch;font-size:16px;color:#B7BECE;line-height:1.65;}.hero-meta{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap;font-size:13px;color:#8993A6;}.hero-meta b{color:#EDEFF3;font-weight:600;}
+.kpi-strip{margin-top:40px;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line-dark);}@media(max-width:900px){.kpi-strip{grid-template-columns:repeat(2,1fr);}}
+.kpi{padding:22px 20px 6px 0;border-right:1px solid var(--line-dark);position:relative;cursor:default;}.kpi:last-child{border-right:none;}@media(max-width:900px){.kpi{border-right:1px solid var(--line-dark);padding:18px 14px;}.kpi:nth-child(2n){border-right:none;}}
+.kpi-num{font-family:'Fraunces',serif;font-size:34px;color:#fff;font-weight:600;line-height:1;}.kpi-num span{font-size:17px;color:var(--gold-soft);font-weight:500;margin-left:2px;}.kpi-label{margin-top:8px;font-size:12.5px;color:#9aa3b5;line-height:1.4;}
+.info-dot{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid #6b7488;color:#9aa3b5;font-size:9.5px;font-style:normal;font-family:'Inter',sans-serif;vertical-align:middle;margin-left:3px;}
+.kpi .tip{visibility:hidden;opacity:0;position:absolute;left:0;top:calc(100% + 10px);background:#1B1F27;color:#EDEFF3;font-size:12px;line-height:1.55;font-weight:400;padding:12px 14px;border-radius:8px;width:240px;z-index:30;pointer-events:none;box-shadow:0 12px 32px rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.08);transition:opacity .15s ease,visibility .15s ease;}.kpi:hover .tip,.kpi:focus .tip,.kpi:focus-within .tip{visibility:visible;opacity:1;}
+section{padding:56px 0;border-bottom:1px solid var(--line);}section:last-of-type{border-bottom:none;}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;flex-wrap:wrap;}.section-head h2{font-size:26px;}.section-num{font-family:'Fraunces',serif;font-size:13px;color:var(--gold);font-weight:600;margin-bottom:6px;}.section-intro{max-width:70ch;color:var(--ink-soft);font-size:15px;margin-bottom:18px;}
+.grid-2{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:start;}@media(max-width:900px){.grid-2{grid-template-columns:1fr;}}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}@media(max-width:1000px){.grid-4{grid-template-columns:repeat(2,1fr);}}@media(max-width:900px){.grid-4{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:22px;}.card-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;}.card-sub{font-size:12.5px;color:var(--muted);margin-bottom:14px;}
+ul.bullets{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;}ul.bullets li{padding-left:20px;position:relative;font-size:14.5px;color:var(--ink-soft);line-height:1.6;}ul.bullets li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;background:var(--teal);border-radius:50%;}ul.bullets li b{color:var(--ink);}
+.stat-mini-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;}.stat-mini .n{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--teal);}.stat-mini .l{font-size:11.5px;color:var(--muted);margin-top:2px;}
+.stat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:16px 18px;}.stat-card .n{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--ink);}.stat-card .n.teal{color:var(--teal);}.stat-card .n.gold{color:var(--gold);}.stat-card .l{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4;}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:26px;}
+.tabbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}.tabbar button{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--ink-soft);background:var(--paper-dim);border:1px solid var(--line);padding:8px 16px;border-radius:20px;cursor:pointer;transition:all .15s ease;}.tabbar button.active{background:var(--ink);color:#fff;border-color:var(--ink);}.tabbar button:hover:not(.active){border-color:var(--teal);color:var(--teal);}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}thead th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);font-weight:600;padding:0 10px 10px;border-bottom:1px solid var(--line);}tbody td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}tbody tr:last-child td{border-bottom:none;}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:var(--teal);color:#fff;}.badge.low{background:#EDE7D8;color:var(--brick);}
+.people-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}@media(max-width:700px){.people-grid{grid-template-columns:1fr;}}
+.person{border:1px solid var(--line);border-radius:var(--radius-s);padding:12px 14px;background:var(--card);}.person .name{font-size:13.5px;font-weight:700;color:var(--ink);}.person .role{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4;}
+.funnel{display:flex;flex-direction:column;gap:10px;margin-top:8px;}.funnel-step{display:grid;grid-template-columns:150px 1fr 70px;align-items:center;gap:14px;font-size:13px;}.funnel-bar-bg{background:var(--paper-dim);border-radius:20px;height:14px;overflow:hidden;}.funnel-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--teal),var(--teal-light));}.funnel-step .val{text-align:right;font-weight:700;color:var(--ink);}
+.table-scroll{max-height:500px;overflow-y:auto;border:1px solid var(--line);border-radius:var(--radius-m);}.table-scroll table thead{position:sticky;top:0;background:var(--card);z-index:2;}.table-scroll table{margin:0;}.table-scroll thead th{padding:12px 14px 12px;cursor:pointer;user-select:none;white-space:nowrap;}.table-scroll thead th:hover{color:var(--teal);}.table-scroll tbody td{padding:11px 14px;}.table-scroll a.plink{color:var(--teal);text-decoration:none;font-weight:600;font-size:12.5px;white-space:nowrap;}.table-scroll a.plink:hover{text-decoration:underline;}
+.row-count{font-size:12px;color:var(--muted);margin-top:8px;}
+.outcomes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px;margin-top:8px;}
+footer{background:var(--ink);color:#8993A6;padding:36px 0;font-size:12.5px;}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}footer b{color:#EDEFF3;}
+.chart-wrap{position:relative;height:260px;}
+.company-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;}.company-bar-label{width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:var(--ink-soft);}.company-bar-bg{flex:1;background:var(--paper-dim);border-radius:20px;height:12px;overflow:hidden;}.company-bar-fill{height:100%;border-radius:20px;}.company-bar-val{width:70px;text-align:right;font-weight:700;font-size:12px;color:var(--ink);}
+.outcome-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:22px;border-left:4px solid var(--teal);}
+.outcome-name{font-size:15px;font-weight:700;color:var(--ink);}.outcome-role{font-size:12.5px;color:var(--muted);margin-top:3px;margin-bottom:12px;}.outcome-body{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+
+.badge-yes{background:var(--teal);color:#fff;}
+.badge-no{background:var(--paper-dim);color:var(--brick);border:1px solid var(--line);}
+.filter-btn{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:var(--ink-soft);background:var(--paper-dim);border:1px solid var(--line);padding:6px 14px;border-radius:20px;cursor:pointer;transition:all .15s ease;white-space:nowrap;}
+.filter-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.filter-btn:hover:not(.active){border-color:var(--teal);color:var(--teal);}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto !important;transition:none !important;}}</style>
+<style>
+.eng-tab{background:none;border:none;border-bottom:2px solid transparent;padding:9px 16px;font-family:inherit;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;transition:color .15s,border-color .15s;}
+.eng-tab.active{color:var(--teal);border-bottom:2px solid var(--teal);}
+.eng-tab:hover{color:var(--ink);}
+.eng-count{font-size:11px;color:inherit;opacity:.75;}
+</style>
+</head>
+<body><div class="shell">
+<nav class="rail" aria-label="Report sections">
+<div class="rail-brand"><img src="data:image/png;base64,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" alt="GroNXT" style="height:20px;width:auto;display:block;margin-bottom:11px;">LinkedIn Performance Report<small>Month 2</small></div>
+<div class="rail-nav" id="railNav">
+<a href="#overview">Overview</a>
+<a href="#content">Content Performance</a>
+<a href="#network">Network Growth</a>
+<a href="#outcomes">Inbound Opportunities</a>
+</div>
+<div class="rail-foot">Prepared by GroNXT</div>
+</nav>
+<main>
+
+<!-- HERO -->
+<div class="hero" id="overview">
+<div class="wrap">
+<div class="hero-kicker">GroNXT &mdash; LinkedIn Performance Report</div>
+<h1>Subramoni S. &mdash; Month 2 Results</h1>
+<p class="hero-sub">Second month of the GroNXT LinkedIn branding programme. 2 posts published (Post 3 and Post 4) targeting pharma, chemical and CDMO EHS and ESG decision-makers. Networking scaled significantly across GSK, Dr. Reddy&rsquo;s Laboratories, Novartis, Cipla and Johnson &amp; Johnson, with 639 connection requests sent.</p>
+<div class="hero-meta">
+<div><b>Reporting Period</b> Month 2</div>
+<div><b>Posts Published</b> 2</div>
+<div><b>Programme</b> LinkedIn Branding &amp; Networking</div>
+<div><b>Prepared by</b> GroNXT</div>
+</div>
+<div class="kpi-strip">
+<div class="kpi"><div class="kpi-num">3,844</div><div class="kpi-label">Total Impressions</div></div>
+<div class="kpi"><div class="kpi-num">104</div><div class="kpi-label">Total Engagement<br><small style="font-size:10px;color:#6b7488;">(Likes + Comments + Reposts)</small></div></div>
+<div class="kpi"><div class="kpi-num">639</div><div class="kpi-label">Connection Requests Sent</div></div>
+<div class="kpi"><div class="kpi-num">182 <span>(28%)</span></div><div class="kpi-label">Connections Accepted</div></div>
+<div class="kpi"><div class="kpi-num">0</div><div class="kpi-label">Inbound Opportunities</div></div>
+</div>
+</div>
+</div>
+
+<!-- 01 CONTENT -->
+<section id="content"><div class="wrap">
+<div class="section-head"><div><div class="section-num">01 &mdash; Content Performance</div><h2>Post Metrics</h2></div></div>
+<p class="section-intro">2 posts published in Month 2. Post 4 led on impressions with 2,086 and 8 comments, while Post 3 led on likes with 51 — together generating 104 total engagements and strong visibility among pharma EHS, ESG and process safety professionals at GSK, Dr. Reddy&rsquo;s, Novartis and Cipla.</p>
+
+<div class="grid-2" style="margin-bottom:28px;">
+<div>
+<div class="stat-mini-row">
+<div class="stat-mini"><div class="n">3,844</div><div class="l">Total Impressions</div></div>
+<div class="stat-mini"><div class="n">92</div><div class="l">Total Likes</div></div>
+<div class="stat-mini"><div class="n">12</div><div class="l">Comments</div></div>
+<div class="stat-mini"><div class="n">0</div><div class="l">Reposts</div></div>
+</div>
+<ul class="bullets" style="margin-top:20px;">
+<li><b>Post 3</b> reached 1,758 impressions with 51 likes and 4 comments — highest like count of the month, resonating strongly with the pharma and CDMO EHS community.</li>
+<li><b>Post 4</b> led on impressions at 2,086 with 8 comments from Directors, VPs, GMs and EHS Heads at Cipla, GSK, Piramal and PI Health Sciences — confirming thought-leadership traction in process safety and ESG.</li>
+<li><b>Engagement rate of 2.7%</b> across both posts, well above the typical LinkedIn average for B2B content.</li>
+<li><b>92 total named engagers</b> across 2 posts — pharma EHS leads, ESG heads, process safety directors and corporate safety officers from across the industry.</li>
+</ul>
+</div>
+<div>
+<div class="card" style="padding:18px;">
+<div class="card-title">Impressions by Post</div>
+<div class="chart-wrap" style="height:200px;"><canvas id="chartImpressions"></canvas></div>
+</div>
+</div>
+</div>
+
+<div class="table-scroll">
+<table>
+<thead><tr><th>Post</th><th>Impressions</th><th>Likes</th><th>Comments</th><th>Reposts</th><th>Total Engagement</th><th>Eng. Rate</th></tr></thead>
+<tbody>
+<tr><td>Post 3</td><td>1,758</td><td>51</td><td>4</td><td>0</td><td>55</td><td>3.1%</td></tr>
+<tr><td>Post 4</td><td>2,086</td><td>41</td><td>8</td><td>0</td><td>49</td><td>2.3%</td></tr>
+
+<tr style="background:var(--paper-dim);"><td><b>Total</b></td><td><b>3,844</b></td><td><b>92</b></td><td><b>12</b></td><td><b>0</b></td><td><b>104</b></td><td><b>2.7%</b></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- People Engaged -->
+<div style="margin-top:32px;">
+<div class="card-title" style="margin-bottom:4px;">People Who Engaged on Posts</div>
+<div class="card-sub" style="margin-bottom:14px;">92 total engagements across 2 posts — by name and job role</div>
+<div class="card" style="padding:0;overflow:hidden;">
+<div style="padding:14px 18px 0;border-bottom:1px solid var(--line);display:flex;gap:0;flex-wrap:wrap;">
+<button class="eng-tab active" id="etab-post-3" onclick="showEngTab('post-3')">Post 3 <span class="eng-count">(51)</span></button><button class="eng-tab " id="etab-post-4" onclick="showEngTab('post-4')">Post 4 <span class="eng-count">(41)</span></button></div>
+<div class="eng-panel" id="epanel-post-3" style="display:block;padding:16px 18px;">
+<table><thead><tr><th>Name</th><th>Designation / Title</th></tr></thead><tbody><tr><td>Subramoni. S</td><td>Corporate EHS Head | India Operations EHS Leader | Process Safety, ESG &amp; Sustainability | Safety Culture Transformation | Greenfield &amp; Brownfield Projects | Pharma, Chemicals &amp; CDMO</td></tr><tr><td>Mohan Reddy Muthumula</td><td>People &amp; Culture Strategist | Talent Acquisition Leader | HR Business Partner | Human Capital</td></tr><tr><td>Mohammed Altaf abdul majid</td><td>Health Safety Environment Officer at KLC Construction</td></tr><tr><td>Srinivas DUDUKA</td><td>Director (Chief QHSEST Officer) – CXO at KEOLIS Hyderabad Mass Rapid Transit System | WSO-CSSD/CSS MIIRSM</td></tr><tr><td>Raja Dadi</td><td>Deputy Chief Manager at Piramal Pharma Solutions</td></tr><tr><td>Aditya Tyagi</td><td>Quality &amp; Compliance Leader | Head – Site Quality | GMP, Quality Systems, Regulatory Compliance, Audits, Data Integrity, Validation &amp; Risk Management</td></tr><tr><td>Choochot Sutthiboriban, CIH</td><td>Regional EH&amp;S Manager at Dow Chemical</td></tr><tr><td>Leena Sharma</td><td>Driving Growth in Pharma R&amp;D | Connecting Innovative Biotech &amp; Pharma with Integrated Drug Discovery &amp; CDMO Services</td></tr><tr><td>Bharat Shevkar</td><td>Senior Manager EHS&amp;S Global External Supply at Johnson &amp; Johnson</td></tr><tr><td>Srinivas Reddy Vancha</td><td>Environmental Health &amp; Safety</td></tr><tr><td>G.V.S. Bhaskara Raju</td><td>EHS Manager (Corporate) | Process Safety | NEBOSH IGC | Industrial Safety</td></tr><tr><td>MATHEW PRASANTH S</td><td>EHS | M.E. Industrial Safety Engineering | ISO 45001:2018 Lead Auditor | NEBOSH IGC | IOSH | Data Center Operations at CtrlS Datacenters</td></tr><tr><td>Davinder Mukesh</td><td>EHS Lead at PI Health Sciences Limited | Ex-Centrient Pharmaceutical, Ballarpur Industry, Siel Chemical Limited &amp; Khanna Paper | Chemical Engineer</td></tr><tr><td>Vinodh Kumar VR</td><td>Rotating Equipment Engineer</td></tr><tr><td>Dineshkumar D</td><td>EHS Professional | Leading Safety &amp; Sustainability | Team Motivator &amp; Team Builder</td></tr><tr><td>SIVATHANU SIVAKUMAR</td><td>Asset Management Systems Advisor at Railway</td></tr><tr><td>VIDIYALA RAVI</td><td>CoE Industrial Safety and Risk Management | Joint Initiative of PI Foundation and Gujarat Institute of Disaster Management</td></tr><tr><td>Anand Khumar</td><td>EHS Professional | B.E. | ADIS | ADICPPS | CHSM | MBA | Ex-Syngene Biocon, USP, Pfizer Hospira &amp; ReSustainability | Pharma | Waste Management | Facility Management | Audit | ESG | Training</td></tr><tr><td>Ramakrishna Guntipelli</td><td>EHS Professional | 14+ Years Experience | EHS Compliance, Safety Culture &amp; Continuous Improvement</td></tr><tr><td>REETIKA JAIN</td><td>Consultant at Antal International | Head Hunter | Legal | EHS &amp; Sustainability</td></tr><tr><td>Dhananjay Patil</td><td>EHS Manager (Process Safety) at Emcure Pharma Ltd | BE (Chemical) | CLI | DGFASLI | MBA-Safety | M.Sc. | NEBOSH-IGC</td></tr><tr><td>Amol Chavhan</td><td>Sr. General Manager | Site Head, PI Health Science Jaipur and Ankleshwar | CRDO | CMO</td></tr><tr><td>Arul Subbarayalu</td><td>Chief Health, Safety and Sustainability Officer</td></tr><tr><td>PADMANABHAN S</td><td>Partner – Life Sciences &amp; Industrial Practice at Cornerstone International Group</td></tr><tr><td>Punam Mandape</td><td>Environment | Environment Compliance</td></tr><tr><td>Elavarasan Pandian</td><td>Head of EHS</td></tr><tr><td>Nadeem Shekh, MIHS</td><td>Corporate Industrial Hygienist at ALIVUS Life Sciences Limited | Ex-Bureau Veritas Group</td></tr><tr><td>Dr. Lekshmi Sree B</td><td>Grid Compliance Studies | BESS Interconnection Studies | Insulation Coordination | PSS Tuning | NGR/NER Design | Load Flow | Short Circuit | Protection Coordination | Arc Flash Analysis</td></tr><tr><td>Ravi Teja</td><td>Head EHS – Sustainability at Maithri Drugs | Ex-Metrochem API, Piramal, Aurobindo Pharma &amp; Dr. Reddy&#x27;s Labs</td></tr><tr><td>Dr. Sunil Kumar Mandal, PhD, MBA, CAITL™, CSSE</td><td>Founder, SP3 Advisory | Director, vBoard India | Independent Director (IICA) | ESG, AI &amp; R&amp;D | Executive &amp; Purpose Coach | Trainer | Ex-VP, PI Industries</td></tr><tr><td>Ajit Joshi</td><td>Global HSE, Sustainability &amp; Risk Governance Leader | ESG &amp; Enterprise Compliance Governance | Business Continuity &amp; Operational Risk Management | GCC &amp; Multi-Site Operations Leadership</td></tr><tr><td>Ramesh Subramanian</td><td>Chief Executive Officer</td></tr><tr><td>Amit Thakkar</td><td>Vice President EHS</td></tr><tr><td>Gaurav Kumar Srivastava (PhD)</td><td>Group Leader (DGM), PI Health Sciences (Integrated Drug Discovery)</td></tr><tr><td>Dr. Sunil Kumar Choudhary</td><td>Group Leader – Work Around CRDMO Projects</td></tr><tr><td>Raman sabapathi</td><td>Senior Executive at Alchymars ICM SM Pvt. Ltd.</td></tr><tr><td>NAVEEN KUMAR</td><td>EHS &amp; Sustainability</td></tr><tr><td>Kiran Chawade</td><td>Executive Safety at Galaxy Surfactants Ltd., Boisar, Mumbai</td></tr><tr><td>Shashidhar Kulkarni</td><td>Not specified</td></tr><tr><td>Dinesh Gore</td><td>Deputy Manager – Process &amp; Powder Safety at Atul Ltd.</td></tr><tr><td>Sandeep Chowdary Nandigam</td><td>EHS &amp; Sustainability Specialist | ISO 14001 | ISO 45001 | Trainer | Workplace Safety | Contractor Safety Management | Work Permit System | Hazardous Waste Management | Legal Compliance</td></tr><tr><td>Venkatesh S</td><td>Senior Manager &amp; Head – Engineering and Safety</td></tr><tr><td>Krunal Parmar</td><td>E&amp;I Engineer at Indorama Ventures: Indovinya | Instrumentation &amp; Control Engineering</td></tr><tr><td>Pradeep Shukla</td><td>EHS Senior Manager at Jubilant Infrastructure Limited, Bharuch</td></tr><tr><td>R.KarthiK</td><td>Deputy General Manager – Environment &amp; Sustainability at Chemplast Sanmar Limited</td></tr><tr><td>Ramachandra Reddy MadiReddy</td><td>Process Engineer at Ami Life Sciences Pvt Ltd</td></tr><tr><td>Dinesh M.</td><td>Senior Manager – Global Projects at Piramal Pharma Ltd.</td></tr><tr><td>Bramhareddy chintareddy</td><td>Quality and Compliance at Dr. Reddy’s</td></tr><tr><td>Mr. Kumar</td><td>Shift In-charge | Chemical Industry | DCS Operation, Process Control &amp; Safety | Founder &amp; Owner, Kumar Elegance</td></tr><tr><td>Anirban Das</td><td>Not specified</td></tr><tr><td>Divay Arora</td><td>Team Lead PSM | Adv PS Dip | ADIS | BTech Chemical | ISO 45001 &amp; 14001 Lead Auditor | Process Safety &amp; Design | PI Health Sciences</td></tr></tbody></table></div><div class="eng-panel" id="epanel-post-4" style="display:none;padding:16px 18px;">
+<table><thead><tr><th>Name</th><th>Designation / Title</th></tr></thead><tbody><tr><td>Subramoni. S</td><td>Corporate EHS Head | India Operations EHS Leader | Process Safety, ESG &amp; Sustainability | Safety Culture Transformation | Greenfield &amp; Brownfield Projects | Pharma, Chemicals &amp; CDMO | Building Zero Harm Organizations</td></tr><tr><td>Sandeep Nikam</td><td>Environmental Health Safety Specialist at Cipla</td></tr><tr><td>Ashutosh Pattanayak</td><td>Vice President &amp; Head-Corporate H&amp;S Governance for GFL &amp; GFCL EV + Head-Corporate Health &amp; Safety and Sustainability @ GFCL-EV</td></tr><tr><td>Vinod Kanumalla</td><td>Corporte HSEQ Head | Senior HSE &amp; ESG Professional | B.Tech (Mech) | M.Tech (EHS) | ADIS | NEBOSH | PG Renewable Energy | 16+ Years | Civil, EPC, Thermal Power &amp; Pipeline Projects | India &amp; Overseas</td></tr><tr><td>RAJASEKHAR REDDY CHIRRA</td><td>Manager At Piramal Pharma Solutions</td></tr><tr><td>Digvijaysinh Rathod</td><td>EHS Professional- PDIS, M.Sc (Env.), B.sc(fire) with 20 years of experience in EHS field.</td></tr><tr><td>Chandrakanth Ramshetty</td><td>General Manager and Heading EHS, ESG and Sustainability in TCG GreenChem Manufacturing Private Limited.</td></tr><tr><td>balraj. bandary</td><td>Sustainable &amp; EHS Manager at Saptagir Laboratories Private Limited</td></tr><tr><td>Amol Chavhan</td><td>Sr General Manager Site Head PI Health Science Jaipur and Ankleshwar #CRDO #CMO</td></tr><tr><td>Srinivasa Raju Mandapati</td><td>Head-Corporate EHS &amp; Sustainability</td></tr><tr><td>Davinder Mukesh</td><td>EHS Lead PI Health Sciences limited | Ex-Centrient Pharmaceutical | Ballarpur Industry | Siel Chemical Limited | Khanna Paper- RLI Faridabad, Chemical Engineer.</td></tr><tr><td>Kumaraswamy K</td><td>Senior Manager EHS</td></tr><tr><td>Ravi Marella</td><td>Head EHS &amp; CSR, SGD Pharma, India</td></tr><tr><td>Jagadeeswararao Gurubilli</td><td>EHS professional</td></tr><tr><td>Ganta Naresh</td><td>EHS Leader | Driving Safety Culture transformation Beyond Compliance | Risk Reduction | Continual Improvement</td></tr><tr><td>Srinivas Duddeda</td><td>Manager in Technology transfer</td></tr><tr><td>Pooja Parul</td><td>HRBP at PI Health Sciences Ltd || Summer Intern at Piramal Enterprises Ltd || IIM Amritsar MBA’25</td></tr><tr><td>Sreenivasulu Kuttuboina</td><td>Ratified Safety Officer from Director of Factories. EHS &amp; Sustainability Head @ Aspiro Pharma Limited || EHS Expert || Ex Delta || Ex Natco || Ex Aurobindo || Ex USV || Ex Hetero</td></tr><tr><td>Shaik Jahangir</td><td>Deputy General Manager - Production at Piramal Pharma Solutions</td></tr><tr><td>Karthick S</td><td>Assistant Manager in Environmental Health &amp; Safety</td></tr><tr><td>Mitesh Marvaniya</td><td>Head - HSEQ at Perstorp Industries India Pvt. Ltd.</td></tr><tr><td>Rishabh Gupta</td><td>Results oriented EHS Professional | Expert in Management Systems, Audits &amp; Sustainable Initiatives | Driving Compliance &amp; ESG</td></tr><tr><td>Ramakrishna Guntipelli</td><td>As an experienced Environment, Health &amp; Safety (EHS) professional, I bring over 14 years of dedicated service in ensuring compliance, promoting a strong safety culture &amp; driving continuous improvement in EHS aspects.</td></tr><tr><td>Arul Subbarayalu</td><td>Chief Health Safety and Sustainability Officer</td></tr><tr><td>Roshhan Jain,CSP®</td><td>Associate General Manager-SHEQ || M. Tech EHS || Ex-NFASL || Ex-GFL</td></tr><tr><td>Mohammed Altaf abdul majid</td><td>Health Safety Environment Officer at Klc Construction</td></tr><tr><td>Leena Sharma</td><td>Driving Growth in Pharma R&amp;D | Connecting Innovative Biotech &amp; Pharma with Integrated Drug Discovery &amp; CDMO Services</td></tr><tr><td>VIDIYALA RAVI</td><td>CoE Industrial Safety and Risk Management (Joint Initiative of PI Foundation and Gujarat Institute of Disaster Management)</td></tr><tr><td>Chandrakant Chiplunkar</td><td>Safety Health &amp; Environment | SHE &amp; PSM Management System | Lead Auditor ISO 45001 | SHE Compliance Audits | Strategic Planning | Gap Analysis | Operations Management</td></tr><tr><td>Vaibhav Naik</td><td>Deputy General Manager EHS</td></tr><tr><td>SUMANTH TOODI</td><td>PROCESS ENGINEER at ARAGEN LIFESCIENCES</td></tr><tr><td>Dinesh Gore</td><td>Deputy Manager - Process &amp; Powder Safety at Atul Ltd.</td></tr><tr><td>Mohan Vaze</td><td>Process &amp; Safety Consultant</td></tr><tr><td>KINTADA MANIKANTA</td><td>HSE, Plant Process Safety, Laboratory Safety, Chemical Safety, Management of Change, PSSR, External Audits, NEBOSH, IOSH, ADIS, W501, ISO 45001 &amp; 14001 Internal Auditor</td></tr><tr><td>Venkatesh S</td><td>Senior Manager &amp; Head - Engineering and Safety</td></tr><tr><td>Gaurav Kumar Srivastava (PhD)</td><td>Group Leader (DGM), PI Health Sciences (Integrated Drug Discovery)</td></tr><tr><td>Anit Kumar Bhaduri</td><td>Industrial Risk, Operational Excellence &amp; Process Safety Governance Advisor | Ex Sr.GM/Advisor, IFFCO | Reliability, Asset Integrity &amp; Strategic Advisory | Mentor, Coach and Author | Fertiliser, Petrochemicals &amp; Energy</td></tr><tr><td>Shashidhar Kulkarni</td><td>Not specified</td></tr><tr><td>Ankit Chaurasia</td><td>Safety Officer at Proconvis Consultants Pvt Ltd</td></tr><tr><td>Divay Arora</td><td>Team Lead PSM || Adv PS Dip || ADIS || BTECH CHEM || ISO45001 &amp; 14001 Lead Auditor || PGDELP-Env laws || Corp PHA Trainer || Process Safety &amp; Design || PI Health Sciences || Ex Navin Fluorine || Ex Aarti Ind || Ex PI ind || Ex Mankind</td></tr><tr><td>Ganesh b</td><td>Chemical Manufacturing | 13+ Years Experience | Production Operations | Process Optimization | DCS | EHS | Team Leadership | SAP</td></tr></tbody></table></div>
+</div>
+</div>
+<script>
+window.showEngTab = function(key){
+  document.querySelectorAll('.eng-panel').forEach(function(p){p.style.display='none';});
+  document.querySelectorAll('.eng-tab').forEach(function(b){b.classList.remove('active');});
+  var panel = document.getElementById('epanel-' + key);
+  var btn = document.getElementById('etab-' + key);
+  if(panel) panel.style.display='block';
+  if(btn) btn.classList.add('active');
+};
+</script>
+
+<div style="margin-top:28px;">
+<div class="card-title" style="margin-bottom:8px;">Engagement by Post</div>
+<div class="card" style="padding:18px;"><div class="chart-wrap" style="height:220px;"><canvas id="chartEngagement"></canvas></div></div>
+</div>
+</div></section>
+
+<!-- 02 NETWORKING -->
+<section id="network"><div class="wrap">
+<div class="section-head"><div><div class="section-num">02 &mdash; Network Growth</div><h2>Networking Activity</h2></div></div>
+<p class="section-intro">639 connection requests sent targeting Directors, VPs, Senior VPs, Heads and Associate Directors at GSK, Dr. Reddy&rsquo;s Laboratories, Novartis, Cipla, Lupin, Johnson &amp; Johnson and Sanofi. 182 accepted (28% rate) — solid performance in a highly selective pharma and CDMO leadership audience.</p>
+
+<div class="grid-2" style="margin-bottom:28px;">
+<div>
+<div class="card">
+<div class="card-title">Connection Funnel</div>
+<div class="card-sub">Month 2 outreach performance</div>
+<div class="funnel">
+<div class="funnel-step"><span>Requests Sent</span><div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:100%;"></div></div><span class="val">639</span></div>
+<div class="funnel-step"><span>Accepted</span><div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:28%;background:linear-gradient(90deg,var(--teal),var(--teal-light));"></div></div><span class="val">182</span></div>
+<div class="funnel-step"><span>Pending</span><div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:72%;background:var(--gold-soft);"></div></div><span class="val">457</span></div>
+</div>
+<div class="stat-mini-row" style="margin-top:16px;">
+<div class="stat-mini"><div class="n">639</div><div class="l">Sent</div></div>
+<div class="stat-mini"><div class="n">182</div><div class="l">Accepted</div></div>
+<div class="stat-mini"><div class="n">28%</div><div class="l">Acceptance Rate</div></div>
+</div>
+</div>
+</div>
+<div>
+<div class="card">
+<div class="card-title">Notable accepted connections</div>
+<div class="card-sub">Senior leaders who accepted the connection request</div>
+<div style="display:flex;flex-direction:column;gap:0;">
+<div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Dr. Jagadeswara rao Konchada</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Managing Director</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Sk pharmatech solutions pvt ltd</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Himanshu Bakshi</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">General Manager and Managing Director, South Asia</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Sanofi</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Sujan Saha</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Managing Director and Head of South East Asia</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">BASF</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Sunil Sarangi</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Managing Director</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Basf India Coatings Pvt Ltd</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Ranjit Puri</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Managing Director Ellie’s Botanics Ex GSK</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;"></div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Ramnish Bedi</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Managing Director</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">KEY TO HSE</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Sandip Prajapati</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Managing Director</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Nucleus Fire Safety &amp; Environment Services</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Manish Shukla</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Group Vice President | Global Head HR - Corporate Functions &amp; HR Strat…</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Bhavesh Kotak</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Vice President Medical Affairs</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Shwetanuj Saha</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Senior Vice President - Head of Strategy, Portfolio Business Developme…</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Sachin Arora</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Vice President &amp; Delivery Head OSD</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Anup Avijit Choudhury</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Vice President &amp; Delivery Manager- Differentiated Formulations</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Mohan Nusetti</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">Senior Vice President | Global Tax Head</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Lupin</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Chiranjoy Chowdhuri</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">VP &amp; Global Head - AI and Data</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Braj P.</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">CIO, Emerging Markets &amp; Global Head of Digital</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div><div style="padding:10px 0;border-bottom:1px solid var(--line);">
+<div style="font-weight:600;font-size:13px;color:var(--ink);">Harshit Shah</div>
+<div style="font-size:12px;color:var(--muted);margin-top:2px;">MSAT Group Lead (Associate Director)</div>
+<div style="font-size:11px;color:var(--teal);margin-top:1px;">Dr. Reddy&#x27;s Laboratories</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" style="margin-bottom:24px;padding:18px;">
+<div class="card-title" style="margin-bottom:14px;">Requests Sent vs Accepted by Company</div>
+<div class="chart-wrap" style="height:300px;"><canvas id="chartNetworking"></canvas></div>
+</div>
+
+<div class="table-scroll">
+<table>
+<thead><tr><th>Company</th><th>Requests Sent</th><th>Accepted</th><th>Acceptance Rate</th></tr></thead>
+<tbody><tr><td>GSK</td><td>121</td><td>18</td><td>15%</td></tr>
+<tr><td>Dr. Reddy&#x27;s Laboratories</td><td>101</td><td>37</td><td>37%</td></tr>
+<tr><td>Novartis</td><td>70</td><td>23</td><td>33%</td></tr>
+<tr><td>Cipla</td><td>38</td><td>17</td><td>45%</td></tr>
+<tr><td>Lupin</td><td>36</td><td>6</td><td>17%</td></tr>
+<tr><td>Johnson &amp; Johnson</td><td>28</td><td>13</td><td>46%</td></tr>
+<tr><td>Sanofi</td><td>20</td><td>9</td><td>45%</td></tr>
+<tr><td>BASF</td><td>17</td><td>2</td><td>12%</td></tr>
+<tr><td>JLL</td><td>4</td><td>2</td><td>50%</td></tr>
+<tr><td>DP World</td><td>4</td><td>1</td><td>25%</td></tr>
+<tr><td>Flipkart</td><td>3</td><td>2</td><td>67%</td></tr>
+<tr><td>Siemens</td><td>3</td><td>1</td><td>33%</td></tr>
+<tr><td>GSK Pharmaceuticals India</td><td>2</td><td>0</td><td>0%</td></tr>
+<tr><td>BASF India Limited</td><td>2</td><td>0</td><td>0%</td></tr>
+<tr><td></td><td>2</td><td>2</td><td>100%</td></tr>
+<tr><td>Tenneco</td><td>2</td><td>0</td><td>0%</td></tr>
+<tr><td>GE Vernova</td><td>2</td><td>0</td><td>0%</td></tr>
+<tr><td>Cognizant</td><td>2</td><td>1</td><td>50%</td></tr>
+<tr><td>ACG World</td><td>2</td><td>1</td><td>50%</td></tr>
+<tr><td>Siemens Energy</td><td>2</td><td>1</td><td>50%</td></tr>
+<tr><td>Tata Electronics Pvt. Ltd.</td><td>2</td><td>0</td><td>0%</td></tr>
+<tr><td>Mahindra Group</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Sanofi Consumer Healthcare</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Sk pharmatech solutions pvt ltd</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Sanofi Consumer Healthcare India Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Sanofi Consumer Healthcare India</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Sanofi India Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Johnson &amp; Johnson Consumer</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>LUPIN PHARMA LTD</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Haleon</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Lupin Global</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>LUPIN LIMITED (Biotech Division)</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Lupin Life Sciences Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Lupin Consumer Healthcare Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>CBRE</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>PharmAvenir</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Basf India Coatings Pvt Ltd</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>BASF INDIA LIMITED</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Basf India Limited Factory</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>PI Industries Ltd</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>BASF Nunhems</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>BASF India Ltd</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>BASF Chemicals India Pvt Ltd</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>BASF South Asia</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Solenis Chemicals India Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Novartis Healthcare Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Tata Chemicals</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Dr.Reddy&#x27;s Laboratories Ltd,</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Dr.Reddy&#x27;s Laboratories</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>NOVARTIS HEALTHCARE PRIVATE LIMITED</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Lupin Ltd</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>TATA CHEMICALS LIMITED</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>MANKIND PHARMA LTD</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Jubilant Life Sciences Ltd</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Zydus Lifesciences</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>TEVA API India Pvt Ltd</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Cargill</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Otis Elevator Company (India) Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>ST Telemedia Global Data Centres (India)</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Ernst &amp; Young (EY)</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Samsung Electronics</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Dell Technologies</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Vertiv</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Not specified in provided text</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Navin Fluorine International Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Savills</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Carrier Corporation</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>EHS Solutions</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Yokohama-ATG</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Johnson Controls</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>DCM Shriram Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Cognitud Sustainability Private Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>EHS Pvt Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Mitsubishi Elevator / Otis Elevators India Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Princeton Digital Group</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Schiender Electric</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>International Real Estate Partners (IREP)</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Indorama Ventures PCL</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>GE HealthCare</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>JLL India</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Makk Safety &amp; Risk Services Private Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Navin Molecular</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Teva Active Pharmaceutical Ingredients</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Dalmia</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>AB InBev</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>IndiGrid</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Teva Pharma</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Siemens Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Jindal Industries Pvt. Ltd.</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Alshams Trading &amp; Projects Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>ECPFO – Environmental and Consumer Protection Foundation</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Troikaa Pharmaceuticals Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>KEY TO HSE</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Larsen &amp; Toubro (L&amp;T)</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Caterpillar Inc</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Hetero Biopharma Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Momentum India</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>CEAT Speciality Tyres</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Tata Hitachi Construction Machinery Company Private Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Willowood Industries Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Deepak Fertilisers and Petrochemicals Corporation Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Toshiba</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Gates Corporation</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Abbott Healthcare Private Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Ohmium Operations Private Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Tata Projects Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>SAEL Industries Ltd.</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Larsen &amp; Toubro Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Not specified in the provided results</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Reliance Industries Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Life EHS Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>IndiGo</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>BuildStreet</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Renvion Solution</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Indofil Industries</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>JSWMI steel</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Siemens Mobility</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Kellanova</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>JSW Cement</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Government of Maharashtra</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>L&amp;T Construction</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Carrier Midea India</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Tewa Pharmaceuticals</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Salvific Safety Solutions Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Esswin Electro Controls Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Abbott</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Rashtriya Metal Industries Limited (RMIL)</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Parekh Integrated Services Pvt. Ltd.</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Artson Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>ELGi Equipments Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>AdaniConneX</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Govt. of Maharashtra</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>L&amp;T</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>CEAT Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Godrej Agrovet Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Cytiva</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Indoco Remedies Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Nucleus Fire Safety &amp; Environment Services</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Ferring Pharmaceuticals</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>ITC Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Adani Green Energy Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Divi’s Laboratories Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Goodyear</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>CANPACK India Private Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Adani Group</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Think Gas</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>BMM Ispat Ltd.</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>LG Chem</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Cummins</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Torrent Power</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>ESL Steel Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>TA &amp; P EHS Consultants Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Caterpillar Inc.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Gem Engserv Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Xylem India</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Siemens Energy India Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Seco Tools</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Sterlite Power Transmission Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Dhanuka Biotech</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Montecarlo Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Wockhardt Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>NCCCL</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Zydus Group</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>NTT Global Data Centers India</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Aarti Industries Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Trinity Engineers Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Repono Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>KEC International</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Zetwerk Manufacturing Processes Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Gujarat Insecticides Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>BirlaNu Limited</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Tata Realty and Infrastructure Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>GE Power</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Triveni Turbines</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Asian Paints</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Fishfa Biogenics</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Saraswati Agrochemical</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Tata Megna</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Kirloskar Ferrous Industries Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Alkem Laboratories Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Synthite Industries Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Hetero Drugs Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Bhilosa Industries Private Limited</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Yokohama Off-Highway Tires</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Allcargo Supply Chain Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Varroc Engineering Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Exide Industries Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Centrient Pharmaceuticals</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>L&amp;T PES IC</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Chloride Metals Ltd. (Exide Group)</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>GLCPL</td><td>1</td><td>1</td><td>100%</td></tr>
+<tr><td>Kawman Pharma</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>ITT Inc.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>First Energy</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Unity Group, India</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Medispray Laboratories Pvt. Ltd.</td><td>1</td><td>0</td><td>0%</td></tr>
+<tr><td>Tata Projects</td><td>1</td><td>0</td><td>0%</td></tr>
+</tbody>
+</table>
+</div>
+<p class="row-count">GSK and Dr. Reddy&rsquo;s Laboratories account for 222 of 639 connection requests sent.</p>
+
+<!-- Full contacts list -->
+<div style="margin-top:36px;">
+<div class="card" style="padding:0;overflow:hidden;">
+<div style="padding:18px 22px 0;">
+<div class="card-title" style="font-size:15px;margin-bottom:3px;">Complete Connections List</div>
+<div class="card-sub" style="margin-bottom:12px;">All 639 connection requests sent &mdash; searchable by name, role or company</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;align-items:center;">
+  <input id="contactSearch" type="text" placeholder="Search by name, role or company&hellip;"
+    style="flex:1;min-width:200px;padding:7px 12px;border:1px solid var(--line);border-radius:var(--radius-m);font-family:inherit;font-size:13px;background:var(--paper);color:var(--ink);outline:none;"
+    oninput="filterContacts()">
+  <div style="display:flex;gap:6px;">
+    <button class="filter-btn active" id="fbtn-all" onclick="setContactFilter(this,'all')">All (639)</button>
+    <button class="filter-btn" id="fbtn-yes" onclick="setContactFilter(this,'yes')">&#10003; Accepted (182)</button>
+    <button class="filter-btn" id="fbtn-no" onclick="setContactFilter(this,'no')">&#10007; Pending (457)</button>
+  </div>
+</div>
+<div id="contact-count" style="font-size:12px;color:var(--muted);padding-bottom:10px;">Showing 639 contacts</div>
+</div>
+<div class="table-scroll" style="max-height:500px;border-radius:0;border-left:none;border-right:none;border-bottom:none;">
+<table id="contactTable">
+<thead><tr><th>Name</th><th>Job Role</th><th>Company</th><th style="width:110px;">Status</th></tr></thead>
+<tbody id="contactBody"><tr data-status="no"><td>Manish Anand</td><td>Director - Global Procurement Excellence and Transformation</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Manish Shukla</td><td>Group Vice President | Global Head HR - Corporate Functions &amp; HR Strategy | CHRO Office</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Chiranjoy Chowdhuri</td><td>VP &amp; Global Head - AI and Data</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Swapnil J.</td><td>Head - Customer Experience, Strategy Deployment and PMO - PSAI</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Dr. Kunal Joshi</td><td>Head of Marketing - Oncology</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Ketan Chaudhari</td><td>Head of Market Access</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Harshit Shah</td><td>MSAT Group Lead (Associate Director)</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Bhupal Reddy Auothu, MBA</td><td>Vice President &amp; Site Head - Biologics - Cell and Gene Therapy</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Bhavesh Kotak</td><td>Vice President Medical Affairs</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Parambrahma Panda</td><td>Head Business Operations &amp; Transformation</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Karun Gaur</td><td>Head, Strategic Alliances &amp; Access</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Shwetanuj Saha</td><td>Senior Vice President - Head of Strategy, Portfolio Business Development - Biologics</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sahil Poddar</td><td>Head of Marketing - Respiratory &amp; Cough</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Subrat Nayak</td><td>Associate Director|Lead - Manufacturing Network Strategy - Global Operations</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Abhishek Gupta</td><td>Head of Technology | Dr. Reddy&#x27;s Laboratories &amp; Nestlé Health Science (DRNHSL)</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>DG Phani</td><td>Head - Intelligent Products &amp; Platforms</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Anjana Kavikkal</td><td>Director Strategic Alliances</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Prasun Guha</td><td>Head - Regulatory Affairs, Biologics</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Priyanka Raonka</td><td>Head of Digital Marketing and Transformation</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sachin Arora</td><td>Vice President &amp; Delivery Head OSD</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Nithin Choudhary</td><td>Head of Quality - Cell and Gene Therapy</td><td>Dr. Reddy&#x27;s Laboratories (Biologics)</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Debasreeta Pattnaik</td><td>Head HR Emerging Markets and Innovative Assets &amp; Consumer Health Branded Markets</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anupama Rao Singh</td><td>Executive Vice President : Latin America| GCC| Centre of Excellence</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Rahul Shroti</td><td>Country Head- EM (Sri Lanka, Maldives, Mauritius) and BD &amp; Portfolio Lead for ISC Region</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>CA Rohit Goyal</td><td>Associate Director Finance</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Rama Bhupal Reddy kandula</td><td>Head, Global MSAT-DS Technology Transfers</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Anup Avijit Choudhury</td><td>Vice President &amp; Delivery Manager- Differentiated Formulations</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Vikas Kumar, Ph.D.</td><td>Head - Product Development, Biosimilars</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sailesh Viswanathan</td><td>Cluster Head - Consumer and Acute therapies</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Rohan Kaushik</td><td>VP &amp; Head - Europe (API &amp; B2B Collaborations) | Global API Portfolio</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Siddhartha Deshpande</td><td>Vice President &amp; Head, South Asia &amp; South-East Asia</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Dr. Karunakar Reddy</td><td>Head, Government Affairs</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Kamala Bhavaraju. Ph.D</td><td>Head- Clinical Bioanalytics and Chief of Staff</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Ashok V K</td><td>Head-Centre of Excellence Oncology India</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Laxmikant Domatwar</td><td>Head of Section</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Asha Jain</td><td>Head of Financial Planning &amp; Analysis - North America</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anil Amorta</td><td>Associate Director</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>ADITYA DAS</td><td>Director, Head of Growth &amp; Omnichannel Marketing</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Neha Singh</td><td>Associate Director Strategy &amp; Transformation</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shivam Puri</td><td>Chief Executive Officer One India</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Tushar Yerandekar</td><td>Director- Cluster Manager (Asia Pacific and Russia CIS Markets)</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Achin Gupta</td><td>Managing Director &amp; Global CEO</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>DEVDUTT KAUSHAL</td><td>Director</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Aamil Kazim</td><td>Director (Lead HR Expanse)</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Manjinder Singh (PhD)</td><td>Senior Director</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>CA Sumit Nawani</td><td>Associate director - Suply Chain Finance</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Swapn Malpani</td><td>CEO - Emerging Markets &amp; Europe</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashok Saini</td><td>Chief Commercial Head - Spectrum</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anshul Jain</td><td>Director</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Vijaykumar Patil</td><td>Associate Director, R&amp;D-Formulation</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dhagash Vora, M.Pharm., MBA</td><td>Associate Director - Business Development &amp; Licensing (BD&amp;L)</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>JITENDRA J.</td><td>Associate Director and Marketing Head</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Ajinkya Pandharkar</td><td>General Manager - Group FP&amp;A</td><td>Mahindra Group</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Tushar Sachdeva</td><td>Senior Manager HR Business Partner</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sumit Roy</td><td>Cluster engineering head API</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>S. S. Robin</td><td>Director, Business Head- Key Accounts</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sahil Kumar</td><td>Associate Director at Cipla Digital Health</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Ignatius Barretto</td><td>Director - Human Resources (CoE) | Talent Acquisition &amp; Governance</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sandeep Sonawane , PMP</td><td>Director</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Boomi Viswanad</td><td>Director – Patient Provider Analytics</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Dr. S. Shajahan - Director - Novartis - Info Security Leader - SOX</td><td>Director - Information Security (SOX)</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajiv Srikanth P</td><td>Associate Director, Corporate Functions Analytics</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vrinda Taneja</td><td>Director - People &amp; Organisation, India International</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sitaratnam Cheemalakonda</td><td>Associate Director Information Security Compliance</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Chitranshi Gupta</td><td>Director - Strategic Planning, Operations</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Vineet Jha</td><td>Associate Director, Product Management (Marketing Technology Products)</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Kiran V.</td><td>Associate Director - People Data Analytics &amp; Insights</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Nirma Prasad</td><td>Associate Director (Data, Digital &amp; IT team): Cloud &amp; AI</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vijay Bhaskar Kotipalli</td><td>Director Enterprise Architecture</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Emad Ahmed</td><td>Assoc. Director Pharmacovigilance Transformation</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Ashish Mallawat</td><td>Director of Information Security &amp; Compliance</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Krattika Gautam</td><td>Associate Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ajay Chourasia</td><td>Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Meeta Kulkarni, Ph.D.</td><td>Associate Director - Decision Science - CVM, Immunology</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Vamshi Krishna Kotte</td><td>Associate Director - Global Quality &amp; Compliance (GxP Quality Incident Management)</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Santosh Singh</td><td>Head of EPRM and Assurance Solutions</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Nitin Bhambri</td><td>Director Delivery for S4 Hana 2024 project for Financial Consolidation Indirect/ Direct Taxation</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Nirmala Mary Pudota</td><td>Associate Director, Digital, Data, and IT, Data Analytics, Data Science and Artificial Intelligence</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Nikhil Khotre</td><td>Associate Director Ethics Risk &amp; Compliance-HSE Audit</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Balakrishna Nadakuditi</td><td>Director, Data Digital and IT</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ramya K</td><td>Associate Director - Data Science (Quality and Compliance)</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Brahmananda Reddy Muchumari</td><td>Associate Director - Data Engineering, DS &amp; AI</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Madhu Bhimavarapu</td><td>Sr. Director, Technology Infrastructure Services</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Gregory Aich</td><td>Senior Director - SAP Analytics and ERP &amp; iShift Community of Practice Lead</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Abhishek Thapliyal</td><td>Head of Insights and Analytics Capabilities Hub</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Abhishek Mittal (MBA, PMP®, IRMCert®, GRCP®)</td><td>Head - Operational Readiness (Manufacturing &amp; Supply)</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Elizabeth Samuel</td><td>Head of Technology - Hyderabad Hub</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nupur Gurbaxani</td><td>Marketing Director</td><td>Sanofi Consumer Healthcare</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr Anitha K</td><td>Head of Clinical Data Management</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Dr. Jagadeswara rao Konchada</td><td>Managing Director</td><td>Sk pharmatech solutions pvt ltd</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Vishal Dubey</td><td>Director – Analytics, BI &amp; Automation | Leading GCCTeams | Digital Transformation</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Lateef S M</td><td>Global Head of Talent Services</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Chirag Trivedi</td><td>Global Head, Clinical Study Units (CSU) Early Operational Strategy</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amol Mali</td><td>Head of Digital - Sanofi Consumer Healthcare, India</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sarat Bnv</td><td>Head of Data Analytics</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Viral Shah</td><td>Head - External Manufacturing CHC India and AMET</td><td>Sanofi Consumer Healthcare India Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Himanshu Bakshi</td><td>General Manager and Managing Director, South Asia</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Juilee Dandekar</td><td>Director, India Strategy and BD</td><td>Sanofi Consumer Healthcare India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Shivani Shukla</td><td>Head of Operations Digital Procurement</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Amritanshu Kumar</td><td>Head of Performance Analytics &amp; Reporting</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Chirag Arora</td><td>Digital Manufacturing Director (MES)</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Jashobrata Bose</td><td>Director - Strategy</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Paromita Bhattacharya</td><td>Head -Portfolio Innovation</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Vaibhav Karandikar</td><td>Chief Financial Officer</td><td>Sanofi India Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Bratin Bag</td><td>Senior Director &amp; Head of Compliance - South Asia</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Vikas Dargan</td><td>Head of Digital GCC @ Hyderabad; Global Head of ERP Products &amp; Services</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Siva Parvathi M.</td><td>Associate Director - Digital MES Development &amp;Operations</td><td>Sanofi</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Niket Talauliker</td><td>Head of Site Quality</td><td>Sanofi</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Ankita Sanghai</td><td>Head of HR - MedTech &amp; One HR India</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Dr Srirupa Das</td><td>Director Medical Affairs</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Shrishaila Patil K</td><td>Associate Director Portfolio Lead – Clinical Programming</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Aparna Vadlamudi</td><td>AI Literacy Content and Innovation Director R&amp;D</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Manish Kumar Singh</td><td>Head India GCC, IT Director, Global Innovation &amp; AI Leader</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Darshika Chandra Khare</td><td>Director, Head HR Asia Pacific Learning Strategy &amp; Execution</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Maneesh Rajkumar Pherwani</td><td>Senior Director &amp; Head - Strategic Customer Group, Growth Capabilities &amp; New Business Development</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Mitesh Menda</td><td>Associate Director of Sales | Ethicon - Wound closure and healing</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Kaushik Chattopadhyay</td><td>Plant Director</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Prasad Shidhaye</td><td>Director, Customer &amp; Logistics Services</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Subramanian Chidambaram</td><td>Senior Director of Software Engineering</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Tiny Sengupta</td><td>Country Director Vision Care, Johnson &amp; Johnson India</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dhruv Kapur</td><td>Business Unit Director - Advanced Energy &amp; Surgical Stapling - J&amp;J Medtech</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Shilpa Kedia</td><td>Senior Finance Director, CFO</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Nishant Tripathi</td><td>Head of Cyber Defense Engineering</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Ganesh Bangalore</td><td>Sr Marketing Director</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sharath Srinivasan</td><td>Director — Digital Surgery Platform</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Atul Khattar</td><td>Business Unit Director Joints Reconstruction and Digital</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Ninoo Grover</td><td>Associate Director - Business Quality, India J&amp;J Consumer</td><td>Johnson &amp; Johnson Consumer</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Neelam Vaswani</td><td>Head of Employee Health and Wellbeing for Johnson &amp; Johnson Group of Companies - India &amp; ANZ</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr Niraj Vyas</td><td>Director Data Management and Central Monitoring</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dinar Mhatre</td><td>Senior Director - Professional Strategy &amp; Business Development - Consumer Health Sector</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Prashanth Kumar Aitha</td><td>Associate Director</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Lokesh Kumar M</td><td>Associate Director</td><td>Johnson &amp; Johnson</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Amit Baxi</td><td>Business Unit Director</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Dr. Ketaki Sabnis-Prasad</td><td>Assistant Director and Head Development Quality Assurance Biotech</td><td>Lupin</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Amit Sareen</td><td>Site Head and Vice President - Manufacturing</td><td>LUPIN LIMITED</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Shankar Sengupta</td><td>Vice President &amp; Cluster Quality Head (CQA)</td><td>LUPIN PHARMA LTD</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sandeep Amritkar</td><td>Assistant Director</td><td>Lupin</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Kaushik Guhathakurta</td><td>Head of Operations OTC-GTN</td><td>Lupin</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Bosco Martins</td><td>Senior Vice President - Projects &amp; Corporate Engg Services</td><td>Lupin Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Saravanan Dorai</td><td>Head of Quality Control</td><td>Lupin</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Dr. Neelam Kardekar</td><td>Assistant Director- Clinical Research</td><td>Lupin</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Murali Krishna</td><td>Assistant Director</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Aji Cheriyan</td><td>Assistant Director</td><td>LUPIN LIMITED</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Pavan Vitta</td><td>Director</td><td>Lupin Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vinod Dhawan</td><td>Group President - Asia Pacific, Africa, Middle-East &amp; Latin America</td><td>LUPIN LIMITED</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Naresh Gupta</td><td>President API</td><td>Lupin Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vikas Jain</td><td>Associate Director</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jigar Bhadra (He / Him)</td><td>Head Of Procurement - Indian Sub Continent</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Reuben Thomas</td><td>Director Technology Strategy</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Deepak Bangre</td><td>Director, Regulatory Platform Innovation</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Srividhya Balasubramaniam</td><td>Associate Director - Enterprise AI</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Kirubakaran K ( K.K )</td><td>Associate Director of Technical Services - Veeva Quality Vault IT Eng, Ops &amp; Migration Projects</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Lokesh Vishwanath</td><td>Director Cyber Security Engineering</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>SuryaKumari Saripalli</td><td>Director Enterprise Architecture</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Yuvaraj Krishnan</td><td>Associate Director - Data &amp; Analytics Products</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Jennifer Chhor</td><td>Head, Omnichannel Content Strategy for India</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Ravivrat Pandey</td><td>Director, Global MarTech and Digital Platforms</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Bhushan Akshikar</td><td>Managing Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Saurabh Singh</td><td>Director, Data Science and Advance Analytics, Trial Analytics</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Soumitri Kadambi, MTech (IIT H), MBA (Univ Manchester)</td><td>Associate Director - Data &amp; AI</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Aparajita Mukherjee Rajput</td><td>CIO &amp; Vice President Technology</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajib Biswas</td><td>Associate Director Machine Learning</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Suraj Ravindran</td><td>Senior Director, Head of Global Data Management Service Delivery</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jayanta Biswas</td><td>Associate Director - Automation Engineering</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Madhumita Behera</td><td>Associate Director AI ML</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sheelu Suthan</td><td>Strategy &amp; Capability Director - Productivity, collaboration &amp; Social</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rohan Kanungo</td><td>Director &amp; Global Capability Center Site Lead (GRC)</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Honey J.</td><td>Director Data &amp; AI Products - Enterprise AI</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Manoj Kumar</td><td>Associate Director, ERP Service Management &amp; Global ERP Operations</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajesh Dinnipati</td><td>Associate Director | Gen AI Product Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amit S.</td><td>Director - Data Engineering &amp; Platforms</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Bijula Ratheesh</td><td>Associate Director- AI Engineering</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Shweta Bhardwaj, MSc, MBA</td><td>Director Global R&amp;D and Digital Policy</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mehul Tyagi</td><td>Associate Director</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kirti Attar</td><td>Associate Director- External supply integration, South Asia</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sangeetha Dass</td><td>Associate Director – Digital &amp; Technology Skills &amp; Programs</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nilesh Kumar</td><td>HR Business Leader, Global Capability Centre and Hubs</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jigar Gohel, MBA PharmaTech</td><td>Associate Director - Global Channel Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Samarth Chanana</td><td>Associate Director - Quality</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sandeep Singh Digital Transformation/S4HANA</td><td>Associate Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Aditi Panwar , PMP</td><td>L&amp;D Governance &amp; Strategic Partnerships and BAU Skills Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ravindra Singh Panwar</td><td>Director Data Management (Oncology)</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>CA Navneet Mahansaria</td><td>Head of Internal Audit</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sudip Majumder</td><td>Head of Governance - Global Finance Risk Management and Controls</td><td>Haleon</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhijeet Pendsay, PMP, CPIM</td><td>Associate Director -Product Management- Supply chain Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Mohit Mhatre PMP®</td><td>Associate Director – Digital Health Innovation &amp; Implementation</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Arun Balaraman</td><td>Associate Director - Clinical Data Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Gurudath Mallya</td><td>Director - P2P GPO</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sameer Giri</td><td>Regional Director Procurement (South Asia)</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anil Surendran</td><td>Technology Architect</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Swapnali Raut</td><td>Director, Global Clinical Operations</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Roopadharshini VK</td><td>Associate Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vishika Hegde</td><td>Associate Director - RIM Data Governance Standards &amp; Quality</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Aditya Chowdhary</td><td>Associate Director - Commercial Excllence Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Krunal Dalal</td><td>Head Medical Affairs</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Hemavathi KM</td><td>Associate Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Divya Nandakumar</td><td>Associate Director - Data Science</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr Ashish Vijay Jain</td><td>Head of Occupational Health - Asia , Middle East , Africa , Russia &amp; CIS</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Madhukara HS</td><td>Associate Director- Governance Risk and Compliance</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anusha Bhargava</td><td>Associate Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sankalp Chawla</td><td>Global Director, Procurement Sustainability - Climate (acting - up)</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Preethi Narasimhan</td><td>Director, Global Learning Services</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rahat Ahmed</td><td>Head of Digital &amp; Customer Engagement</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kaushik Mishra</td><td>Head of Business Intelligence</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Shishendu Shukla(CISM)(IAM and PAM Leader)(CA Guardian)</td><td>Director, IAM</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Priyank Parakh</td><td>Director HR, India Sub-continent</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Deepali Patel</td><td>Associate Director - Data Analytics and Platforms</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dhirendra Panda</td><td>Senior Director, Enterprise Data and Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Aparna Jayachandra</td><td>Director - Safety Evaluation and Risk management</td><td>GSK Pharmaceuticals India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Debu Moni Baruah</td><td>Director, Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anshuman Kumar Sinha</td><td>Director, Data &amp; Analytics Product - Global Function</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Gouri Solapure</td><td>Associate Director Global HR Process Change &amp; Communication</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sonia Mishra</td><td>Associate Director Engineering</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashok Jagannathan</td><td>Business Programme Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Utpala Wandhare</td><td>Head of UX Design &amp; Research- Data &amp; AI</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Gaurang Chaturvedi</td><td>Associate Director - R&amp;D and Medical Affairs Digital Technology</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sreeparna Majumder</td><td>Associate Director of Data and Analytics Product Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rishikesh Jaiwant</td><td>Executive Vice President, Head of India Supply Chain Operations</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Gautam Mehta</td><td>Global Product Strategy CX Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Parvez Siraj</td><td>Vice President</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashutosh Kotwal</td><td>Vice President Human Resources</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Hirak Bose</td><td>Senior Vice President</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Yashwant Mahadik</td><td>President - Global Human Resources &amp; Co-Lead Business Transformation Office.</td><td>Lupin Global</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Suman Datta</td><td>Chief Procurement Officer</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Christoph Funke</td><td>President and Chief Technical Operations Officer</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Uday Bhatte</td><td>Head of Administration</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sanjay Gupta</td><td>Senior Vice President - Engineering Projects and EHS</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rishabh Deo Mall</td><td>Deputy GM - Head of Data Science and Analytics</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Bijender Vats</td><td>Sr Vice President &amp; Head - HR</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sourabh Agrawal</td><td>Executive Vice President</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Atul Kaushik</td><td>Vice President - Pharma Research</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>CHANDRAKANT KATHOTE</td><td>Site Head and Senior Vice President- Operations</td><td>LUPIN LIMITED (Biotech Division)</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashutosh Inamdar</td><td>Chief Executive Officer</td><td>Lupin Life Sciences Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ajay Tiwari</td><td>Vice President Human Resources</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jigar Dhuvad</td><td>Head - Business Excellence &amp; Finance Transformation</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Divya Sharma</td><td>SGM - Head of Strategic Manufacturing Projects</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Saurabh Gupta</td><td>Sr Vice President - Head Global Supply Chain and Cluster Manufacturing</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhinav Sahai</td><td>Head of Strategy and Project Management Office</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sumita Mohapatro Pani</td><td>Vice President &amp; Head - Business Development &amp; In- licensing , Business Ethics &amp; Compliance</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rahul Shinde</td><td>CEO Lupin&#x27;s MultiCare Philippines Inc. &amp; Head Lupin South East Asia Business</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Madhu Raju Saghee</td><td>Senior Vice President - Corporate Quality</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amit Desai</td><td>Vice President</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sameer Penkar</td><td>Chief Executive Officer</td><td>Lupin Consumer Healthcare Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Suhas Kirani Ravindra</td><td>Head of Data Science</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sumeet Biswal</td><td>Associate Director- Pharma R&amp;D-AI Product Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amit Bal</td><td>Head of External Supply -CMO</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Yoggita Devi Saha</td><td>Director - Finance</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sebastian Sandesh CSM, ITIL</td><td>Associate Director - Responsible AI Risk, Privacy and Governance</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kapil Agarwal</td><td>Site Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jyothi Sharma</td><td>Associate Director - Technology Product</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Harkamal Singh Sethi</td><td>Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sahana Shetty</td><td>Global Payroll Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vinay Ratnaparkhi</td><td>Director - API Operations - Ext. Mfg. Supply</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Karthik H S</td><td>Associate Director - Laboratory Study Management (Human Biological sample Management)</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nikhil Wadatkar</td><td>Associate Director - Supply Chain Performance and Insights</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sanjay Vasandi</td><td>Assoc. Director- Global Procurement - Marketing, Sales &amp; Technology</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Archana Kulkarni</td><td>Director Market Research &amp; Business Performance</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>🏆Richa Kumar</td><td>Associate Director - AI Content Operations</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Roshan Rane</td><td>Director - Digital &amp; Tech</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prasad Babu K G</td><td>Associate Director - Performance &amp; Insights - Supply Chian</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Chezhiyan Veerappan</td><td>Director of Digital and Tech Product Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhijit Deb</td><td>Director Data Acquisition</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kaushik Dutta</td><td>Associate Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rachit Aggarwal</td><td>Director Enterprise Transformation</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Deepanshu Agrawal</td><td>Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vishwanath Swarup</td><td>Commercial Head: General Medicine</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>anurag Srivastava</td><td>Director of Engineering</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ritesh M. Dhundi</td><td>Head, DS Manufacturing (Biosimilars)</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Inala Kamalakaran</td><td>Global Head- Strategic Sourcing &amp; Partnerships</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Malathi Sridhar</td><td>Head of External formulation Manufacturing</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sai Prasad Chennabathni</td><td>Head Finance, India Business</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Siva Sankar Ala</td><td>Director-Travel and Hospitality</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sekhar Reddy</td><td>Head of MSAT</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajesh Chaprala</td><td>Director - Travel and Hospitality</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>SUBRAHMANYESWARA RAO CHALAMALA</td><td>Associate Vice President - Business Development &amp; Strategic Alliances</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anirudh Gautam</td><td>Head - Clinical Strategy &amp; Innovation, Global Clinical Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Chitresh Agarwal</td><td>Associate Director Finance - CFO office | Finance Transformation &amp; Corporate FP&amp;A</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anil Jain</td><td>Head – Global Medical Affairs</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Yogesh Birari</td><td>Cluster Head</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>M V Narasimham</td><td>Chief Financial Officer</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Narendra Maharaj</td><td>Vice President and Head, Clinical Development, Biologics</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Lalatendu Panigrahi., Ph.D</td><td>Sr. Director Global - Topical Formulations Research &amp; Development</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajinder kalia</td><td>Site Engineering Head</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Indrajit Sarkar</td><td>Commerical Head - Oncology</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Shivaani Lal</td><td>Vice President, Marketing OTC Emerging Markets &amp; Innovation</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajeev Kumar</td><td>Head of Supply Chain Management, Emerging Markets</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Mukesh Kumar Madhra</td><td>VP &amp; Head - API Life Cycle Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Richa Jayaswal</td><td>Head of Human Resources</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Rajan K.</td><td>Enterprise Architecture Director, India Lead</td><td>CBRE</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jayakrishnan M</td><td>Associate Director - Data, Digital &amp; IT Shared Services</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nilotpal Das</td><td>Director - Solution Delivery</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sourabh Mukherjee</td><td>Global Head - Environmental Sustainability</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr Vivekananda Reddy</td><td>Director - Medical Insights and Analytics</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Praveen Dass</td><td>Executive Director, Study Management, Global Medical Affairs</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jagjit Singh</td><td>Head, TRD, PSPV, RDQ and India Region Capability Learning Solutions</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Shirsh Priyam</td><td>Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kapil Sharma</td><td>Director - Cloud Platform Engineering</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kalicharan Mahasivabhattu</td><td>Director- Data Assets</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prateek Sinha</td><td>Director - Future Readiness, Launch &amp; Field Operations</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kailash Joshi</td><td>Executive(Sr) Director -Analytics ,Insights and Decision Enablement ( US)</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Partho Chakraborty PMP®</td><td>Associate Director P&amp;O IT Novartis</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Arun Prakash Asokan</td><td>Global Director of Data Science and AI</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Shine Vijayan</td><td>Director, AI Platforms and Strategy</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anand Kanhere</td><td>Head, Data Strategy &amp; Management</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Navin Gnaneshwar</td><td>Director - Transformation &amp; Innovation</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Phani Kondapalli</td><td>Director Enterprise Architecture | Data Management | Data Integration | Analytics</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Devasish Bora</td><td>Director Cloud &amp; Infrastructure Services - Middleware &amp; AES</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Priyank Khare</td><td>Director (Partner) - Market Access &amp; HEOR</td><td>PharmAvenir</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Vaishali Iyer</td><td>Country Head Communications, Patient Advocacy and CSR</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Suryarao Atmakuri</td><td>Head of IT Automation</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mrityunjay Singh</td><td>Head of Innovation &amp; Data science</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Salil Dani</td><td>Executive Director, US Marketing - AI and Lead NOCCs</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Chaitanya Suri</td><td>Head of Procurement - Medical Afairs &amp; Head of Procurement - Integrations &amp; Separations (ad interim)</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Brahmanand K Mallik</td><td>Director, Supply Chain and Operations, India</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Saurabh Sinha</td><td>Head of Facilities Management</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sharad kulkarni</td><td>Head Digital Services -India</td><td>BASF</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sujan Saha</td><td>Managing Director and Head of South East Asia</td><td>BASF</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sunil Sarangi</td><td>Managing Director</td><td>Basf India Coatings Pvt Ltd</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Mehul Joshi</td><td>Head of Logistic Procurement</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Selvakumar V</td><td>Business Head - Resins &amp; Additives,South Asia</td><td>BASF INDIA LIMITED</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajesh Naik</td><td>Director Of Manufacturing Operations (India)</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Giridhar Ranuva</td><td>Business Director, BASF Agricultural Solutions, India</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Srinivasulu Patti</td><td>Director indirect procurment Regional Services</td><td>Basf India Limited Factory</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Parag Kulkarni</td><td>Head of Local Business Management, Dispersions and Resins, South Asia</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anil Choudhary</td><td>Vice President</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mohit Maheshwari</td><td>Director-Finance</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Chandrakant Suryavanshi</td><td>Business Director</td><td>BASF India Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>KS Thyagarajan</td><td>Head of Corporate Affairs &amp; Sustainibility (Agri)</td><td>PI Industries Ltd</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anitha Polimetla</td><td>Head of HR APAC &amp; Global HR Business Partner - Operations</td><td>BASF Nunhems</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jyotsana shrivastava</td><td>Director CSR &amp; Sustainability</td><td>BASF India Ltd</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashima Sushilchandra</td><td>Director Engineering and Technical expertise Hub India</td><td>BASF Chemicals India Pvt Ltd</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Ashok Mishra</td><td>Head of EOR Business Management, Asia Pacific</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>RAJESH MEHTA</td><td>Head - HR Operations</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Laxmish Prabhu</td><td>Business Director- Care Chemicals</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ramakrishnan Vallinayagam</td><td>Director - Crop Protection Discovery</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Bejoy Chandran</td><td>Vice President, Chemicals and Performance Products</td><td>BASF South Asia</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nalini Nutan</td><td>Head of Human Resources</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhay Kulkarnii</td><td>Senior Manager - Mining and Heavy Industries, Industrial Solutions</td><td>Solenis Chemicals India Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vinod Patel</td><td>Head EHS &amp; Utility</td><td>BASF India Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Upasana Wadhwani</td><td>EHS Head</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>RAMESH RAMAN</td><td>Retired</td><td>BASF</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Navdeep Thakur</td><td>Cluster EHS Head - Associate Director - Environment Health Safety &amp; Sustainability ( ESG)</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Shirish Sharma</td><td>Site EHS Head - Senior Manager - Environment Health Safety &amp; sustainability</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Amol Hardikar</td><td>Director, EHS</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Pramod Kumar Nayak</td><td>Associate Director - EHS &amp; Sustainability</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Milind Desai</td><td>Head of Environment, Health, and Safety</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Akhilesh Pawar</td><td>Scientific Director - Safety Evaluation and Risk Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashish Vig</td><td>CEO Cipla Digital Health</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sandeep Khandelwal</td><td>Chief Executive Officer - Asia, Africa, Australia &amp; CISUR</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashish Adukia</td><td>Chief Executive Officer, API</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Srinivasu Metlapalli</td><td>Global Safety Head</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>DR AMIT SINGH JADON</td><td>Medical Director, Global Drug Safety</td><td>Novartis Healthcare Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Alok Chandra</td><td>Chief-Health Safety &amp; Environment</td><td>Tata Chemicals</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Chetan Sharma</td><td>Associate Scientific Director - Safety Evaluation and Risk Management</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Dr. R. Arun Kumar</td><td>Scientific Director-Safety Evaluation &amp; Risk Management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Bhavesh Vats</td><td>Director</td><td>Lupin</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Shalini Choudhary</td><td>Associate Director of Operations</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Srini K</td><td>Associate Director - DDIT OpEx Planning</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Malvika Gupta</td><td></td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Tejaswi Redla</td><td>Associate Director - Therapy Area Insights</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Himanshu Dubey</td><td>Associate Director</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sonia Chitnis</td><td>Associate Director Corporate Strategy</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Ameya T.</td><td>Associate Director- Portfolio Strategy &amp; Planning (Global Health Insights)</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Digant Shah</td><td>Associate Director, Operational Excellence</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Kamal Arora</td><td>Associate Director, Solution and Process Acceleration</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Bhupankar Sarma</td><td>Associate Director ( North | Central | Parts of West Zone), HQ Delhi</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Binoy Gopinathan</td><td>Director Enterprise Architecture Innovative Medicine - Europe</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Arjun Mallappa Wandimali</td><td>Director (Unit V, Oncology Unit)</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Dr. Manjul Chaudhary, PMP®</td><td>Global Program Regulatory Associate Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ronojit Biswas</td><td>CFO and Executive Director GSK India</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Raghunandan Prabhu</td><td>Associate Director PV Systems Management</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sridevi Krishnamurthy</td><td>Head, Strategic Planning &amp; Business Operations - Digital Delivery</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Hiren Kapasi</td><td>Head of Market Research</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Arindam Chakraborty</td><td>Director</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vijay Kumar Siddhavatula</td><td>Associate Director DDIT IES Solution Delivery</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Yatendra Sharma</td><td>Global Program Director</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Rushi Pandya</td><td>Director, Global Medical Affairs</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Bhovmik Bhatt</td><td>Associate Director Human Resources</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Prashanth Reddy Gaddameedhi</td><td>Associate Vice President API R&amp;D</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Hardik Patel</td><td>Group lead/Associate Director - Biologics Drug products Quality</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Krishna Nethi</td><td>Associate director - Global financial reporting</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Manish Kumar</td><td>Division Head</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Jayakumar (Jay) Mohanraj</td><td>Associate Vice President</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Madan Sangle</td><td>Head - Field Experience</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Tangelapally Suresh</td><td>Site Head</td><td>Dr. Reddy’s Formulations Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Dr Md Mohosin Layek</td><td>Director</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prashant Bilagi</td><td>Associate VP</td><td>Dr.Reddy&#x27;s Laboratories Ltd,</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Falgun Prajapati</td><td>Head HR - India Business</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ankit Gupta</td><td>Director Finance - Biz. Integration &amp; Strategy | Performance Mgt E2E | Consumer Health, Europe</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Shamsullah S</td><td>Director - Global Portfolio Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Kumari Raksha</td><td>Associate Director Product Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Khushi Ram</td><td>Director-Portfolio Management- Active Pharmaceutical ingredients (API)</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sid Kolwankar</td><td>Director - Digital Therapeutics</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Rajeeb Kumar Adhikary</td><td>Site Operation Head in Dr Reddy</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>jaykar yenugula</td><td>Head of Production</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Ramana M V</td><td>Executive Vice President and Head Branded Markets (India and Emerging Countries)</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Anoop Rajashekar</td><td>Head of Quality - Biologics and Cell Gene Therapy</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Neha Johari</td><td>Director (Lead) Alliance Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Kumar Subramanian</td><td>Director</td><td>Dr.Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Parth Parikh</td><td>Country Head - Uzbekistan</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Lalit Sharma</td><td>Vice President-Projects &amp; Engineering</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Megha Bhattacharya</td><td>Director (Expert-Bioassay) Global Clinical Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Aditya Vadlamani, SHRM-SCP</td><td>Associate Director - Compensation &amp; Benefits</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr Ashok Aggarwal</td><td>Executive Vice President -Sales-Marketing and Operation -India and Global</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajinder Kaur Grewal</td><td>Senior Director &amp; Head Portfolio Management/ Strategy</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Balaji K V M</td><td>Associate Director, Data Acquisition</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Aruna Pushparajan, PMP®, CSM®</td><td>Associate Director Functional Design Architecture - SCM Planning</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Dr. Shirshendu Das Gupta</td><td>Associate Director</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Deepak Arora</td><td>Director - DDIT (PPM / MedOps Solution Delivery)</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Priyanka Sapra</td><td>Global Senior Director, Finance</td><td>Johnson &amp; Johnson</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amit Mhaskar</td><td>Associate Director Digital &amp; Data Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vamsi Kapil</td><td>Associate Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Alok Kumar</td><td>Associate Director</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rahul Malik</td><td>Associate Director</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Saikat Santra, PMP®</td><td>Associate Director</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Abhishek Sharma</td><td>Director, Business Performance, EPIA</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>C.Saseenthra Bose</td><td>Director</td><td>Cipla</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Jitendra Sattigeri</td><td>Pharma R&amp;D Leader Executive</td><td></td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sagar Shinde</td><td>Global Labeling Associate Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Hemantha Balla</td><td>Associate Director</td><td>NOVARTIS HEALTHCARE PRIVATE LIMITED</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Krishna Menon Bodapati</td><td>Associate Director Solution Delivery Technical Design Architecture</td><td>Novartis</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shishir Kashyap</td><td>Associate Director Data Science</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Mohan Nusetti</td><td>Senior Vice President | Global Tax Head</td><td>Lupin</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Lalitha Kiran Koduri</td><td>Director</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Munish Talwar</td><td>Vice President - Pharma Research</td><td>Lupin Ltd</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Devika GA</td><td>Sr Director - Identity &amp; Access Management</td><td>Novartis</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ravi Upadhyay</td><td>Associate Director- Customer Experience</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Shirish Sable</td><td>Associate Director - Veeva Quality Management Suite</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shruti Rastogi, PhD</td><td>Associate Director - Data Science &amp; Medical Engineering</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Nabendu Guha</td><td>Associate Director, Risk Management</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Priya A.</td><td>Associate Director Customer Experience (EMEA)</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Grishma Karekar</td><td>Director CMC Regulatory Affairs Development GRA – Biopharm Mature Product</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Garima P (she, her, hers)</td><td>Director, Head of Medical Writing Centre of Excellence</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Arnab Chakraborty</td><td>Associate Director- Enterprise Data Analytics</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Namarta Jain</td><td>Associate Director Strategy and Operations (Cx Accelerator, Commercial Enterprise AI)</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Vyshnavi Mannemala</td><td>Director - Global Solution Owner for AI and Helpdesk</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sundaresan S.</td><td>Director Design Assurance &amp; Product Management - Cyber Security</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Y S Chibber</td><td>Associate Director - Global Channel Analytics</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Vinay Kumar Manjunatha</td><td>Associate Director : Insights to Impact</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Vinay Kumar</td><td>Associate Director</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Esha Malhotra Chawla</td><td>Associate Director - Data &amp; Analytics</td><td>GSK Pharmaceuticals India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Subhodeep Bandopadhyay</td><td>Associate Director</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sharmila Shetty</td><td>Director-Submission Delivery Excellence-Lifecycle management</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>ritwik setu</td><td>Associate Director-Servicenow</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sugandha Dangi</td><td>Associate Director and Real World Programming RU Head</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Ranjit Puri</td><td>Managing Director Ellie’s Botanics Ex GSK</td><td></td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Amaranatha Reddy Seethi</td><td>Associate Director, Research and Development</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Dr Rajaram R.</td><td>Associate Medical Director, Clinical Safety and Pharmacovigilance</td><td>GSK</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Dr. Sandipa Jadhav</td><td>Associate Director - Global Employee Health &amp; Wellbeing</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhishek Srivastava</td><td>Director - Data Acquisition</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Padmanabh Desai</td><td>Associate Director - Submission Production</td><td>GSK</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Alok Joshi</td><td>Director Business Development, Product Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Raghuraman S</td><td>Associate Director HR Technology</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Pawan M.</td><td>Principal Heading Analytics for India Business</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Braj P.</td><td>CIO, Emerging Markets &amp; Global Head of Digital</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Aditya Gudimella</td><td>Director- Business Development, Sales and Marketing, Middle East markets ; API and B2B formulations</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhinav Mishra</td><td>Vice President - BD and Strategic Partnerships - Innovative Assets</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Raghava Srinivas</td><td>Vice President- India Supply chain &amp; Global Biologics planning</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>kirankumar badaboina</td><td>Global Head of Data Engineering, Data Governance Analytics CoE</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Saidulu Chilka</td><td>Associate Director</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shriya Khandwe</td><td>Head of Business Development Licensing EM</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vinesh Kumar</td><td>Head API RM Chemical Sourcing</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ritesh Mishra</td><td>Senior Vice President &amp; Global Head IT Infrastructure &amp; Security</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Arun Gummidala</td><td>Director Bussiness development and Portfolio Management</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Deepak Manot</td><td>Head Strategy &amp; Portfolio</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Ravi Kumar Marikanty, PhD</td><td>Group lead/Associate Director at Dr Reddy&#x27;s Biologics</td><td>Dr. Reddy&#x27;s Laboratories</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Ashutosh Kumar Jha</td><td>Director and Head EHS Process &amp; Construction Safety</td><td>Cipla</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Satyajit Roy</td><td>Head of Safety &amp; Health</td><td>TATA CHEMICALS LIMITED</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Suresh Raju Penmetsa</td><td>Chief Risk Officer &amp; Senior Vice President - Corporate Environment, Health, Safety &amp; Sustainability</td><td>MANKIND PHARMA LTD</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajesh Deshmukh</td><td>Head -EHS</td><td>Jubilant Life Sciences Ltd</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ashoksinh Rana</td><td>Head of Environment, Health, and Safety</td><td>Zydus Lifesciences</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Chandrakumar Singh</td><td>Director EHS – Country/Site Lead</td><td>TEVA API India Pvt Ltd</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prashant Kumar Singh</td><td>Director EHS – South Asia</td><td>Cargill</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abhaykumar Shah</td><td>Director – Environment, Health &amp; Safety (EH&amp;S)</td><td>Otis Elevator Company (India) Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amit Singh</td><td>EHS Head (Senior Director)</td><td>ST Telemedia Global Data Centres (India)</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajat Kumar</td><td>Senior Director – EHS</td><td>Tenneco</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sunil Gonsalves</td><td>Director, EHS &amp; Sustainability / Advisory Services</td><td>Ernst &amp; Young (EY)</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sufian Ishrat</td><td>Director EHS</td><td>Samsung Electronics</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ganesh TS</td><td>Senior Director, Global Facilities and EHS</td><td>Dell Technologies</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Hitesh Koli</td><td>EHS Director</td><td>Vertiv</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nithin Puthalath</td><td>HSSE Director (APAC Operations)</td><td>Not specified in provided text</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jayaprakash Hanumanthaiah</td><td>Director EHS – Regional Lead APAC</td><td>JLL</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Subodh Kumar</td><td>Senior Director – EHS</td><td>Navin Fluorine International Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sachin I</td><td>Senior Director &amp; National Head EHS</td><td>Savills</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mohammed Mannan</td><td>Director, Environment, Health &amp; Safety</td><td>Carrier Corporation</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Saurin Khambhata</td><td>HSE Director</td><td>EHS Solutions</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Satish Kumar Rao</td><td>EHS Director</td><td>Yokohama-ATG</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Iftheqhar Ahmed Sailani</td><td>EHS Director – India Business</td><td>Johnson Controls</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. NJ Singhretii</td><td>Whole-Time Director – EHS</td><td>DCM Shriram Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Saket Sinha</td><td>Director EHS Services</td><td>Cognitud Sustainability Private Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shiva Prasad M</td><td>Director – Operations</td><td>EHS Pvt Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Santosh Mhatre</td><td>Regional Head – EH&amp;S</td><td>Mitsubishi Elevator / Otis Elevators India Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Naresh Chawla</td><td>Director – HSSW</td><td>Princeton Digital Group</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Pawan Singh</td><td>Global Director EHS</td><td>Schiender Electric</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Devi Prasad CertIOSH</td><td>Director – EHS</td><td>International Real Estate Partners (IREP)</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Jesus Daniel, CMSE®</td><td>Associate Director – EHS</td><td>Flipkart</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Pankaj Surwade</td><td>Regional EHS Director – APAC Fibers</td><td>Indorama Ventures PCL</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sathyanarayanan G.</td><td>Director – EHS</td><td>GE HealthCare</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shweta Varshney</td><td>Head – Environment, Health &amp; Safety (EHS)</td><td>Siemens</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Magesh Babu</td><td>Director – Environment, Health &amp; Safety</td><td>JLL India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Parul Gupta</td><td>Director – EHS Operations and Training</td><td>Makk Safety &amp; Risk Services Private Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Rajendra Singh Rathore</td><td>Associate Director – EHS</td><td>Navin Molecular</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Hitesh Lachhwani</td><td>Senior Director &amp; Head – HSE</td><td>DP World</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nitin Ambavane</td><td>Associate Director – EHS</td><td>Teva Active Pharmaceutical Ingredients</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Srinivasan Ravi</td><td>Director – EHS</td><td>Flipkart</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Aravind Nair (MIIRSM, AIFireE)</td><td>Director &amp; Head – HSE, Construction Management Projects – India</td><td>JLL</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Ajendra Agrawal (CSP, Grad IOSH, RLI)</td><td>EHS &amp; Sustainability Head – GE Vernova GSI APAC Region</td><td>GE Vernova</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Uday Singh CSP BE</td><td>National Head EHS</td><td>Dalmia</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Harsha Kaliki</td><td>Associate Director – EHS</td><td>AB InBev</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Md Quaisar Imam</td><td>Head of EHS</td><td>IndiGrid</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sanjay Deogharkar</td><td>Associate Director – EHS &amp; Sustainability</td><td>Teva Pharma</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Karthikeyan Ilankannan</td><td>Associate director EHS</td><td>Cognizant</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Bhimgouda Goudar</td><td>Head EHS – Smart Infrastructure</td><td>Siemens Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Rakesh Dhankher</td><td>Senior Manager &amp; Head – EHS</td><td>Jindal Industries Pvt. Ltd.</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>L. Krishna Murthy</td><td>Head – EHS</td><td>Alshams Trading &amp; Projects Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sagar Mhatre</td><td>Director – HSE, Ports and Terminals, CFSs – SCO Region</td><td>DP World</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dr. Umesh Kumar Purbey</td><td>Director</td><td>ECPFO – Environmental and Consumer Protection Foundation</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vinay Tiwari</td><td>Global Head – Corporate EHS &amp; Sustainability</td><td>Troikaa Pharmaceuticals Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Ramnish Bedi</td><td>Managing Director</td><td>KEY TO HSE</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Devendra Gaur, CSP</td><td>Senior Deputy General Manager – EHS; Head – EHS</td><td>Larsen &amp; Toubro (L&amp;T)</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Annasaheb Bhor</td><td>Head EHS – Smart Infrastructure</td><td>Caterpillar Inc</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Siva Prasad Rangisetti</td><td>Plant EHS Head</td><td>Hetero Biopharma Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Suresh Tanwar</td><td>Executive Director – Safety &amp; Health</td><td>Momentum India</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Nitin Chavan</td><td>HSE and Sustainability HOD</td><td>CEAT Speciality Tyres</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Akash Thakur</td><td>EHS Leadership</td><td>Tata Hitachi Construction Machinery Company Private Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Vivek Pandit</td><td>Head EHS</td><td>Willowood Industries Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Tanaji Shinde</td><td>Corporate EHS Head &amp; Sustainability</td><td>Deepak Fertilisers and Petrochemicals Corporation Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Rajendra Kumar Sharma</td><td>Head of Health, Safety and Environment</td><td>Toshiba</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Mahesh Singh</td><td>Head-HSE</td><td>Gates Corporation</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Archit Soni</td><td>Associate Director – Supply Chain EHS – Established Pharma Division – India</td><td>Abbott Healthcare Private Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Priya Iyer</td><td>Associate Director – Environment, Health &amp; Safety</td><td>Ohmium Operations Private Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Pradeep Singh</td><td>Head EHS</td><td>Tata Projects Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Rishi Singh</td><td>Lead – EHS &amp; Sustainability</td><td>SAEL Industries Ltd.</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sudharsan R</td><td>Sr. DGM – EHS Head</td><td>Larsen &amp; Toubro Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Ananthan Mani</td><td>Corporate Head – EHS</td><td>Not specified in the provided results</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Yogesh K. Lakhtariya</td><td>Head – HSEF (Health, Safety, Environment &amp; Fire)</td><td>Reliance Industries Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Om Prakash Prasad</td><td>Managing Director</td><td>Life EHS Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Colonel Bharat Vijayant</td><td>Director Corporate &amp; Workplace Safety, Security &amp; Compliances</td><td>IndiGo</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Pradeep Kumar Pathak</td><td>Director EHS and ESG</td><td>BuildStreet</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Siujith Kumar</td><td>Corporate EHS Head &amp; Sustainability</td><td>Renvion Solution</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Ramakrishnan SRG</td><td>Executive Director – Safety &amp; Health</td><td>Indofil Industries</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Raj Kumar</td><td>Head of EHS</td><td>JSWMI steel</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sunit Kumar</td><td>Global Leader – Environment, Health &amp; Safety; SMO Global Regional EHS Head</td><td>Siemens Mobility</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Phanindra Pasumarthy</td><td>Associate Director – Administration, Facilities &amp; Corporate EHS</td><td>Kellanova</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prasanna Kumar DH</td><td>Executive Director – Environmental, Health and Safety</td><td>Tenneco</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ranjan Das</td><td>Associate Vice President – Head Safety</td><td>JSW Cement</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vaibhav Baban Jamble</td><td>Deputy Director – Directorate of Industrial Safety &amp; Health (DISH)</td><td>Government of Maharashtra</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Subhasis Majumdar</td><td>Associate Director; Global EHS Centre of Excellence Leader</td><td>Cognizant</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Harsh Jain</td><td>Regional EHS Head</td><td>L&amp;T Construction</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Amol Dokhe</td><td>Plant EHS Head – Environment, Health, Safety, Sustainability &amp; ESG</td><td>Carrier Midea India</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shakti Pharande</td><td>Business Unit – EHS Head, Regional Solutions &amp; Services</td><td>Siemens</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Gopala Krishna Gokhale</td><td>Sr. Director EHS</td><td>Tewa Pharmaceuticals</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Saravana Kumar</td><td>Director – EHS, ESG, Safety, Compliance &amp; Sustainability</td><td>Salvific Safety Solutions Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Satyendra Kumar</td><td>Head – EHS &amp; Compliance</td><td>Esswin Electro Controls Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sant Saran Tamada</td><td>Segment EHS Head</td><td>Siemens</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Shanmukha Sreenivas CSP</td><td>Associate Director – Commercial &amp; Technical EHS Support</td><td>Abbott</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Akash N.</td><td>Section EHS Head</td><td>Rashtriya Metal Industries Limited (RMIL)</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Jalkumar Inshulker, Cert IOSH</td><td>EHS Lead – India Operations</td><td>Parekh Integrated Services Pvt. Ltd.</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Vinod Kanumalla</td><td>Corporate HSEQ Head</td><td>Artson Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Nishith Dave</td><td>DGM – HSE (Logistics)</td><td>DP World</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Prakash S</td><td>Lead – EHS</td><td>ELGi Equipments Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Yogender Singh</td><td>HSE Manager</td><td>AdaniConneX</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Vinod Madurkar</td><td>Assistant Director</td><td>Govt. of Maharashtra</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sachin B</td><td>Cluster EHS</td><td>L&amp;T</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mahendra Chougule</td><td>General Manager – Corporate EHS</td><td>CEAT Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Babu Ebienezar</td><td>Environment, Health and Safety Lead</td><td>JLL</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Prem Upadhyaya</td><td>General Manager – EHS</td><td>Godrej Agrovet Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Govindaraj N.R</td><td>HSE Head</td><td>DP World</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Madhu Satyanarayana</td><td>APAC Senior EHS Leader</td><td>Cytiva</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Amol Suryawanshi</td><td>Senior Manager – EHS</td><td>Indoco Remedies Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Karthick R</td><td>EHS-FLS Director</td><td>JLL</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Sandip Prajapati</td><td>Managing Director</td><td>Nucleus Fire Safety &amp; Environment Services</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Govinda Prabhu Moni</td><td>Global Senior Manager – EHS</td><td>Ferring Pharmaceuticals</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Azharuddin Mohd</td><td>EHS Head</td><td>ITC Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Manoranjan Dash</td><td>Corporate EHS Head – Hydro PSP</td><td>Adani Green Energy Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Satish Kumar Nimmagadda</td><td>Senior Manager – EHS</td><td>Divi’s Laboratories Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sachin Khetade</td><td>EHSS Leader</td><td>ACG World</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Amit Nagar</td><td>EHS Lead</td><td>Goodyear</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Nitin Chothave</td><td>Deputy Manager – EHS</td><td>CANPACK India Private Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sourav Basu</td><td>EHS Lead</td><td>Siemens Energy</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Vikas Dixit</td><td>EHS Site Lead</td><td>ACG World</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Devendra Singh Baghel</td><td>EHS and Quality Head – Steam Power, South Asia Region</td><td>GE Vernova</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Jigar Patel</td><td>EHS Leadership</td><td>Adani Group</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Manas Ranjan</td><td>HSSE And ESG manager</td><td>Think Gas</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Dinesh Mishra</td><td>AGM &amp; Head – Safety &amp; Fire Services</td><td>BMM Ispat Ltd.</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Pavan Vadavalli</td><td>Senior Manager EHS</td><td>LG Chem</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Kumar Ashish</td><td>India EHS Lead</td><td>Cummins</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Jignesh Shah</td><td>AGM Head EHS – Renewable Energy Projects</td><td>Torrent Power</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Sanjay Kumar</td><td>Environment, Health and Safety Sr. Manager</td><td>ESL Steel Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Tapan Wagle</td><td>Director</td><td>TA &amp; P EHS Consultants Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>George P. Varkey. M. E</td><td>EHS Manager</td><td>Caterpillar Inc.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sanjay Kumar Singh</td><td>Vice President – Safety</td><td>Gem Engserv Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ramesh Chandra Parmar</td><td>Senior Manager – EHS and Sustainability</td><td>Xylem India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dixit Trivedi</td><td>Sr. Manager EHS</td><td>Siemens Energy India Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sandip Sapkal</td><td>Environment, Health &amp; Safety Manager</td><td>Seco Tools</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dinkar</td><td>HSE Manager</td><td>Sterlite Power Transmission Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>RìtèsH kshàtrìyà</td><td>Head of Environment, Health and Safety</td><td>Dhanuka Biotech</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Pawan Mishra</td><td>Corporate Head – EHS</td><td>Montecarlo Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Jeevan Rao</td><td>Head EHS</td><td>Tata Electronics Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mahendra Yeola</td><td>Head EHS</td><td>Wockhardt Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Harshal Hirde</td><td>Head – Corporate EHS</td><td>NCCCL</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prasanna Hota</td><td>Vice President &amp; Head – EHS</td><td>Zydus Group</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ganesh Patil</td><td>EHS Head</td><td>NTT Global Data Centers India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Viinod Bhagat</td><td>EHS Head</td><td>Aarti Industries Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Tukaram Dhawale</td><td>Head EHS &amp; Sustainability</td><td>Trinity Engineers Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Rajesh Kumar Mishra</td><td>Corporate Head – EHS</td><td>Repono Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Bhadresh Modi</td><td>Corporate EHS &amp; ESG Head</td><td>KEC International</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ravinath K. P.</td><td>Head – EHS</td><td>Zetwerk Manufacturing Processes Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Dharmendra Patel</td><td>EHS Head</td><td>Gujarat Insecticides Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Srinivasa Rao Divve</td><td>Corporate Head – EHS, Sustainability &amp; ESG</td><td>BirlaNu Limited</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Niraj Mishra</td><td>Head EHS – SPEL PE</td><td>Siemens Energy</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mahesh Gaikwad</td><td>VP &amp; Head – EHS</td><td>Tata Realty and Infrastructure Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Harish Makhija</td><td>Head EHS</td><td>GE Power</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Preethi Bhat</td><td>EHS head</td><td>Triveni Turbines</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Girish Yadav</td><td>EHS head</td><td>Asian Paints</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Dalsaniya Vinod</td><td>EHS head</td><td>Fishfa Biogenics</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="yes"><td>Nikhil Bhatti</td><td>EHS head</td><td>Saraswati Agrochemical</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Mukesh Katarnavare</td><td>Corporate head EHS</td><td>Tata Megna</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Takbhate Rama</td><td>Head EHS, Sustainability, Lead GHG Verifier, Lead Auditor – IMS</td><td>Kirloskar Ferrous Industries Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Mukesh Kumar</td><td>Cluster Head EHS &amp; Sustainability</td><td>Alkem Laboratories Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ravindra Pratap Singh</td><td>Regional EHS Lead – East India</td><td>Flipkart</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Lijo George</td><td>Corporate EHS Head / Deputy General Manager – EHS</td><td>Synthite Industries Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Jagannath Sista</td><td>Head EHS</td><td>Hetero Drugs Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Harishchandra Chaudhari</td><td>EHS Head</td><td>Bhilosa Industries Private Limited</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Mahipati Sarawale</td><td>Corporate EHS Head (Vice President)</td><td>Yokohama Off-Highway Tires</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>S Koteswar Subudhi</td><td>EHS Head</td><td>Allcargo Supply Chain Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Atul Joshi</td><td>Regional EHS Head</td><td>Varroc Engineering Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Prasath A</td><td>DGM &amp; Head – Plant EHS &amp; ESG</td><td>Exide Industries Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Naveen Mittal</td><td>Head – EHS</td><td>Centrient Pharmaceuticals</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Perumal Senthilnathan</td><td>EHS Head</td><td>L&amp;T PES IC</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Sagar Kharade</td><td>Head EHS</td><td>Chloride Metals Ltd. (Exide Group)</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="yes"><td>Sufyan Mohammad</td><td>HSE Head</td><td>GLCPL</td><td><span class="badge-yes">&#10003; Accepted</span></td></tr>
+<tr data-status="no"><td>Rajendran V</td><td>Head EHS</td><td>Kawman Pharma</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Ronak Patel</td><td>EHS Head</td><td>ITT Inc.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>E Nandakumar</td><td>Head HSE</td><td>First Energy</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Himanshu Sharma</td><td>EHS Head</td><td>Unity Group, India</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Saravanan R.</td><td>Head – Safety, Health and Environment</td><td>Tata Electronics Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Hari Bagalkar</td><td>Site EHS Head</td><td>Medispray Laboratories Pvt. Ltd.</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+<tr data-status="no"><td>Abinash Nayak</td><td>HSE Head</td><td>Tata Projects</td><td><span class="badge-no">&#10007; Pending</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var _currentFilter='all';
+  function filterContacts(){
+    var q=document.getElementById('contactSearch').value.toLowerCase().trim();
+    var rows=document.querySelectorAll('#contactBody tr');
+    var shown=0;
+    rows.forEach(function(tr){
+      var st=tr.getAttribute('data-status');
+      var txt=tr.textContent.toLowerCase();
+      var ok=(_currentFilter==='all'||st===_currentFilter)&&(!q||txt.indexOf(q)!==-1);
+      tr.style.display=ok?'':'none';
+      if(ok)shown++;
+    });
+    document.getElementById('contact-count').textContent='Showing '+shown+' contact'+(shown!==1?'s':'');
+  }
+  window.filterContacts=filterContacts;
+  window.setContactFilter=function(btn,f){
+    _currentFilter=f;
+    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    filterContacts();
+  };
+})();
+</script>
+</div></section>
+
+<!-- 03 OUTCOMES -->
+<section id="outcomes"><div class="wrap">
+<div class="section-head"><div><div class="section-num">03 &mdash; Inbound Opportunities</div><h2>Opportunities Generated</h2></div></div>
+<p class="section-intro">No inbound opportunities were recorded in Month 2. With 639 connection requests sent and 182 new connections established across pharma EHS and ESG leadership, the groundwork is in place for opportunities to develop in Month 3.</p>
+<div class="card" style="padding:24px;color:var(--muted);font-size:14px;">No inbound opportunities recorded this month.</div>
+</div></section>
+
+<footer><div class="wrap"><div>Prepared by <b>GroNXT</b> &mdash; LinkedIn Branding &amp; Networking</div><div>Subramoni S. &mdash; Month 2 Report</div></div></footer>
+</main>
+</div>
+
+<script>
+var sections=document.querySelectorAll('section[id], .hero[id]');
+var navLinks=document.querySelectorAll('.rail-nav a');
+window.addEventListener('scroll',function(){
+  var scrollY=window.pageYOffset+100,current='';
+  sections.forEach(function(s){if(scrollY>=s.offsetTop)current=s.id;});
+  navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+current);});
+},{passive:true});
+
+function initCharts(){
+  if(typeof Chart==='undefined'){window.addEventListener('chartjs-ready',initCharts);return;}
+  var TEAL='#1F6F63',TEAL_L='#4C9C8D',GOLD='#B8892F';
+  var commonFont={family:"'Inter', sans-serif",size:12};
+
+  new Chart(document.getElementById('chartImpressions'),{
+    type:'bar',
+    data:{labels:["Post 3", "Post 4"],datasets:[{label:'Impressions',data:[1758, 2086],backgroundColor:TEAL,borderRadius:4}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y.toLocaleString()+' impressions';}}}},scales:{y:{beginAtZero:true,grid:{color:'#E4DFD2'},ticks:{font:commonFont,callback:function(v){return v>=1000?(v/1000).toFixed(0)+'K':v;}}},x:{grid:{display:false},ticks:{font:commonFont}}}}
+  });
+
+  new Chart(document.getElementById('chartEngagement'),{
+    type:'bar',
+    data:{labels:["Post 3", "Post 4"],datasets:[
+      {label:'Likes',data:[51, 41],backgroundColor:TEAL,borderRadius:3},
+      {label:'Comments',data:[4, 8],backgroundColor:GOLD,borderRadius:3},
+      {label:'Reposts',data:[0, 0],backgroundColor:TEAL_L,borderRadius:3}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{font:commonFont,boxWidth:12}}},scales:{y:{beginAtZero:true,grid:{color:'#E4DFD2'},ticks:{font:commonFont}},x:{grid:{display:false},ticks:{font:commonFont}}}}
+  });
+
+  new Chart(document.getElementById('chartNetworking'),{
+    type:'bar',
+    data:{labels:["GSK", "Dr. Reddy's Laboratories", "Novartis", "Cipla", "Lupin", "Johnson & Johnson", "Sanofi", "BASF", "JLL"],datasets:[
+      {label:'Sent',data:[121, 101, 70, 38, 36, 28, 20, 17, 4],backgroundColor:'#E4DFD2',borderRadius:3},
+      {label:'Accepted',data:[18, 37, 23, 17, 6, 13, 9, 2, 2],backgroundColor:TEAL,borderRadius:3}
+    ]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{font:commonFont,boxWidth:12}}},scales:{x:{beginAtZero:true,grid:{color:'#E4DFD2'},ticks:{font:commonFont}},y:{grid:{display:false},ticks:{font:commonFont}}}}
+  });
+}
+initCharts();
+</script>
+</body>
+</html>
